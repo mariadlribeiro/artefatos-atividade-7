@@ -68,3 +68,8 @@ A classificação impede que um resultado armazenado pelos autores seja tratado 
 A utilização de um prompt padronizado não produziu avaliações completamente idênticas. As diferenças aumentaram nos critérios que dependem de execução, especialmente F e R. O estudo mostra que a avaliação por LLM depende não apenas das instruções, mas também do acesso ao artefato, das condições de execução e da possibilidade de verificar independentemente os resultados.
 
 **Autora:** Maria de Lurdes Ribeiro
+
+
+## Tarefa 8 — análise de robustez
+
+A extensão da atividade está organizada separadamente em [`docs/tarefa8/`](docs/tarefa8/README.md), sem substituir os registros da Tarefa 7. Inclui protocolo experimental, registro de versões e esforço, prompts, tabelas de coleta, comparação T7 × T8 e fluxograma. Os resultados de T8 estão marcados como pendentes até que as novas variantes sejam efetivamente executadas e suas evidências verificadas.
