@@ -80,6 +80,6 @@ O teste confirma a divergência entre o rótulo histórico e os campos da string
 - **Selos que permaneceram estáveis ou mudaram:** ainda não determinado.
 - **Evidências novas verificadas diretamente:** arquivos principais existem; README e canonicalização foram inspecionados; clone por Git falhou com código 128 por DNS; teste local da fixture confirmou hash stable `3ce29174...` e hash rich `e20c4825...`, este último correspondente ao registro histórico rotulado `stable`.
 - **Afirmações sem verificação independente:** ambiente e erro de clonagem da resposta original não têm log bruto anexado; o pipeline de rede completo não foi executado.
-- **Limitações:** a resposta é um resultado do modelo, não comprova reprodução do pipeline. A auditoria detalhada está em `AUDITORIA_EVIDENCIAS_T8_GPT6.md`; a resposta original de ChatGPT da T7 não foi localizada.
+- **Limitações:** a resposta é um resultado do modelo, não comprova reprodução do pipeline. A auditoria detalhada está em `AUDITORIA_EVIDENCIAS_T8_GPT6.md`; ChatGPT não foi utilizado na T7, conforme esclarecimento da responsável; portanto, não existe resposta ChatGPT-T7 a recuperar.
 
-A comparação continua inconclusiva quanto à robustez entre configurações, pois falta a resposta original ChatGPT-T7 e a transcrição integral T8. A evidência stable/rich é uma descoberta técnica independente, mas não substitui a execução completa do pipeline.
+A comparação de robustez permanece exploratória e inconclusiva: a T7 documenta Claude, Grok e Gemini, enquanto a T8 registra GPT-6, sem uma linha de base ChatGPT-T7. Também não há transcrição literal integral das rodadas T8. A evidência stable/rich é uma descoberta técnica independente, mas não substitui a execução completa do pipeline.
