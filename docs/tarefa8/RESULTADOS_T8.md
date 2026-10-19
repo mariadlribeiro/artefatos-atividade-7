@@ -2,7 +2,7 @@
 
 ## 1. Estado da coleta
 
-**Status: primeira resposta T8 registrada; revisão independente das evidências ainda pendente.** A execução T8-GPT6-01 foi obtida em 2026-10-19 usando o nome de modelo exibido GPT-6 e esforço de raciocínio padrão. A versão exata não foi informada. A resposta foi registrada em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md).
+**Status: primeira resposta T8 registrada; revisão independente das evidências ainda pendente.** A execução T8-GPT6-01 foi obtida em 2026-10-19 usando o nome de modelo exibido GPT-6 e esforço de raciocínio padrão. A versão exata não foi informada. O registro estruturado está em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md). Ele não é uma transcrição literal palavra por palavra; a transcrição integral original não foi arquivada separadamente.
 
 Esta execução contém análise documental e de código relatada pelo modelo e uma tentativa de execução independente que não foi concluída. Portanto, não representa uma execução bem-sucedida do pipeline IoT-ID, nem uma verificação independente de todas as afirmações da resposta.
 
@@ -10,9 +10,9 @@ A linha de base resumida da Tarefa 7 está documentada em [../RESULTADOS_LLM.md]
 
 ## 2. Registro por execução
 
-| ID | Provedor/modelo e versão | Esforço | Tipo de avaliação | D | F | S | R | Resposta salva? | Evidências verificadas por revisão independente? |
+| ID | Provedor/modelo e versão | Esforço | Tipo de avaliação | D | F | S | R | Registro estruturado salvo? | Transcrição literal integral? | Evidências verificadas por revisão independente? |
 |---|---|---|---|---|---|---|---|---|---|
-| T8-GPT6-01 | GPT-6; versão exata não informada | Padrão | Analítica + tentativa de execução | Favorável quanto à disponibilidade pública, provisório | Funcionalidade não confirmada por execução | Estrutura favorável, com ressalvas | Não verificada independentemente | Sim | Não |
+| T8-GPT6-01 | GPT-6; versão exata não informada | Padrão | Analítica + tentativa de execução | Favorável quanto à disponibilidade pública, provisório | Funcionalidade não confirmada por execução | Estrutura favorável, com ressalvas | Não verificada independentemente | Sim | Não arquivada separadamente | Não |
 | T8-C-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
 | T8-C-02 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
 | T8-G-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
@@ -57,7 +57,8 @@ Não converter campos pendentes em resultados negativos ou positivos. A avaliaç
 
 ## 6. Resumo parcial
 
-- **Variantes T8 com resposta registrada:** 1 (T8-GPT6-01).
+- **Variantes T8 com registro estruturado:** 1 (T8-GPT6-01).
+- **Transcrição literal integral da resposta:** não arquivada separadamente.
 - **Modelo exibido:** GPT-6.
 - **Esforço:** padrão.
 - **Versão exata:** não informada.
