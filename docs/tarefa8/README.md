@@ -13,13 +13,16 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 - [Protocolo experimental](PROTOCOLO_EXPERIMENTAL.md): desenho do estudo, variáveis controladas e procedimento.
 - [Configurações dos modelos](CONFIGURACOES_MODELOS.md): registro das versões, provedores e esforço.
 - [Prompts](PROMPTS.md): prompt-base e instruções para as variantes.
-- [Resultados da Tarefa 8](RESULTADOS_T8.md): planilhas de registro para avaliações analíticas e por execução.
+- [Resultados da Tarefa 8](RESULTADOS_T8.md): registro das respostas e da verificação das evidências.
+- [Avaliação GPT-6 — esforço padrão](T8_GPT6_PADRAO.md): resposta registrada, ambiente relatado, conclusões provisórias e limitações.
 - [Comparação T7 × T8](COMPARACAO_T7_T8.md): comparação de estabilidade e concordância.
 - [Fluxograma](FLUXOGRAMA_T8.md): fluxo da atividade.
 
 ## Situação dos resultados
 
-Os documentos estão preparados para conduzir e registrar a Tarefa 8. **Nenhum resultado novo de modelo foi inventado ou apresentado como se já tivesse sido executado.** Os resultados da Tarefa 7 são usados como linha de base; as células T8 permanecem pendentes até que as variantes sejam executadas e suas respostas sejam verificadas diretamente no artefato.
+**Uma resposta da T8 foi registrada:** T8-GPT6-01, com nome de modelo exibido GPT-6, esforço padrão e data de 2026-10-19. A versão exata não foi informada. A resposta contém análise documental/de código e relata uma tentativa de clonagem que falhou por resolução DNS; o pipeline IoT-ID não foi executado integralmente.
+
+As conclusões dessa resposta são provisórias. A revisão independente dos caminhos e das afirmações técnicas citadas ainda está pendente, assim como a recuperação da resposta original de ChatGPT na Tarefa 7 e a execução das demais variantes. Não interpretar campos pendentes como resultados negativos ou positivos e não alterar os resultados originais da Tarefa 7.
 
 ## Pergunta de pesquisa
 
