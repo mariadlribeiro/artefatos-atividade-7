@@ -131,7 +131,7 @@ A presença de hashes e logs no repositório comprova que os autores disponibili
 - **Registro estruturado preservado no Git:** sim, neste arquivo
 - **Transcrição literal palavra por palavra:** não foi arquivada separadamente; não afirmar que este documento é uma cópia literal da resposta original
 - **Evidências verificadas diretamente por uma segunda revisão independente:** não
-- **Comparação com a resposta original do ChatGPT na Tarefa 7:** pendente de recuperar e conferir a resposta original
+- **Comparação com ChatGPT na Tarefa 7:** não aplicável; conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7. A comparação com a T7 é entre modelos diferentes. a resposta original
 
 ## 8. Referências
 
