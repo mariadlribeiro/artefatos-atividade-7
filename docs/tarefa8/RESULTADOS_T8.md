@@ -2,7 +2,7 @@
 
 ## 1. Estado da coleta
 
-**Status: primeira resposta T8 registrada; revisão independente das evidências ainda pendente.** A execução T8-GPT6-01 foi obtida em 2026-10-19 usando o nome de modelo exibido GPT-6 e esforço de raciocínio padrão. A versão exata não foi informada. O registro estruturado está em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md). Ele não é uma transcrição literal palavra por palavra; a transcrição integral original não foi arquivada separadamente.
+**Status: uma resposta T8 registrada; auditoria independente parcial concluída; demais variantes pendentes.** A execução T8-GPT6-01 foi obtida em 2026-10-19 usando o nome de modelo exibido GPT-6 e esforço de raciocínio padrão. A versão exata não foi informada. O registro estruturado está em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md). Ele não é uma transcrição literal palavra por palavra; a transcrição integral original não foi arquivada separadamente. A auditoria das afirmações e arquivos citados está em [AUDITORIA_EVIDENCIAS_T8_GPT6.md](AUDITORIA_EVIDENCIAS_T8_GPT6.md).
 
 Esta execução contém análise documental e de código relatada pelo modelo e uma tentativa de execução independente que não foi concluída. Portanto, não representa uma execução bem-sucedida do pipeline IoT-ID, nem uma verificação independente de todas as afirmações da resposta.
 
@@ -12,7 +12,7 @@ A linha de base resumida da Tarefa 7 está documentada em [../RESULTADOS_LLM.md]
 
 | ID | Provedor/modelo e versão | Esforço | Tipo de avaliação | D | F | S | R | Registro estruturado salvo? | Transcrição literal integral? | Evidências verificadas por revisão independente? |
 |---|---|---|---|---|---|---|---|---|---|
-| T8-GPT6-01 | GPT-6; versão exata não informada | Padrão | Analítica + tentativa de execução | Favorável quanto à disponibilidade pública, provisório | Funcionalidade não confirmada por execução | Estrutura favorável, com ressalvas | Não verificada independentemente | Sim | Não arquivada separadamente | Não |
+| T8-GPT6-01 | GPT-6; versão exata não informada | Padrão | Analítica + tentativa de execução | Acesso público confirmado na auditoria | Não confirmada por execução completa | Estrutura documentada; sem teste longitudinal | Não confirmada; divergência histórica/código identificada | Sim | Não arquivada separadamente | Parcial: inspeção dos arquivos e recálculo de hash |
 | T8-C-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
 | T8-C-02 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
 | T8-G-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
@@ -29,11 +29,11 @@ Para cada execução, preencher:
 | ID da execução | Critério | Decisão do modelo | Evidência/caminho citado | Evidência existe? | Sustenta a decisão? | Tipo D/C/A/E | Observação |
 |---|---|---|---|---|---|---|---|
 | T8-GPT6-01 | D | Favorável quanto à disponibilidade pública | Repositório e README do artefato | Pendente de revisão independente completa | Pendente | D | Resposta cita documentação pública; clonagem não foi concluída |
-| T8-GPT6-01 | F | Pipeline não confirmado por execução | Módulos de fingerprinting e exemplos no README | Pendente de conferir cada arquivo citado | Pendente | C/A | Exemplos dos autores não equivalem a execução independente |
+| T8-GPT6-01 | F | Pipeline não confirmado por execução completa | Módulos de fingerprinting e exemplos no README | Sim, arquivos existem; pipeline não foi executado | Parcialmente sustentada documentalmente | C/A | Inspeção de código não equivale à execução do fluxo de rede |
 | T8-GPT6-01 | S | Estrutura favorável, com ressalvas | Módulos, documentação e requirements.txt | Pendente de revisão independente completa | Pendente | C/D | Inferência estrutural; não houve avaliação longitudinal |
-| T8-GPT6-01 | R | Não verificada independentemente | Procedimento e hashes de referência no README | Pendente de revisão independente completa | Pendente | D/A | Não houve repetição dos resultados de referência |
+| T8-GPT6-01 | R | Não confirmada por reprodução completa | Procedimento, registros TCL e código de canonicalização | Sim; recálculo parcial encontrou divergência stable/rich | Parcial, com ressalva importante | D/C/A/E parcial | Hash armazenado consistente entre seis arquivos, mas a string histórica inclui campos rich apesar do rótulo stable |
 
-Uma evidência é considerada verificada somente depois de abrir o arquivo, trecho, comando ou resultado referido e confirmar que ele existe e é pertinente. Uma URL citada pelo modelo, por si só, não comprova que o conteúdo foi consultado. Os registros acima refletem a resposta produzida e precisam de revisão dos arquivos citados antes de serem tratados como evidência verificada.
+Uma evidência é considerada verificada somente depois de abrir o arquivo, trecho, comando ou resultado referido e confirmar que ele existe e é pertinente. A auditoria verificou a existência dos quatro módulos principais, README, requirements e arquivos de Docker, inspecionou registros de execução e encontrou uma divergência entre um hash histórico rotulado como stable e a política stable descrita no código atual. Ver detalhes e escopo em [AUDITORIA_EVIDENCIAS_T8_GPT6.md](AUDITORIA_EVIDENCIAS_T8_GPT6.md).
 
 ## 4. Execução independente
 
@@ -66,8 +66,8 @@ Não converter campos pendentes em resultados negativos ou positivos. A avaliaç
 - **Execução independente do pipeline:** não concluída.
 - **Motivo relatado:** falha de resolução DNS na clonagem e ausência de ferramentas de rede no ambiente.
 - **Selos que permaneceram estáveis ou mudaram:** ainda não determinado.
-- **Evidências novas verificadas diretamente por revisão independente:** nenhuma registrada até o momento.
-- **Afirmações sem verificação independente:** arquivos e detalhes técnicos citados na resposta, ambiente e erro de clonagem sem log bruto anexado.
-- **Limitações:** a resposta é um resultado do modelo, não substitui a auditoria dos arquivos e não comprova reprodução do artefato.
+- **Evidências novas verificadas diretamente:** arquivos principais existem; código/README foram inspecionados; uma string canônica histórica teve o SHA-256 recalculado e foi encontrada divergência entre o registro rotulado `stable` e o código atual.
+- **Afirmações sem verificação independente:** ambiente e erro de clonagem da resposta original não têm log bruto anexado; o pipeline de rede completo não foi executado.
+- **Limitações:** a resposta é um resultado do modelo, não comprova reprodução do pipeline. A auditoria detalhada está em `AUDITORIA_EVIDENCIAS_T8_GPT6.md`; a resposta original de ChatGPT da T7 não foi localizada.
 
-A discussão final deve ser atualizada depois da revisão independente das evidências e da coleta de outras variantes.
+A discussão final deve ser atualizada depois da recuperação da resposta original do ChatGPT da T7 e da coleta controlada de outras variantes.
