@@ -75,10 +75,10 @@ Preencher uma linha por critério e variante.
 | Gemini | F | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
 | Gemini | S | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
 | Gemini | R | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| GPT-6 (T8) | D | Não se aplica: ChatGPT não foi usado na T7 | Favorável quanto à disponibilidade pública, provisório | Não determinável | Recuperar resposta T7 | Revisão independente pendente | Clonagem falhou; não é teste do critério D em si | Pendente |
-| GPT-6 (T8) | F | Não se aplica: ChatGPT não foi usado na T7 | Não confirmada por execução | Não determinável | Recuperar resposta T7 | Arquivos citados precisam ser conferidos | Pipeline não executado | Pendente |
-| GPT-6 (T8) | S | Não se aplica: ChatGPT não foi usado na T7 | Estrutura favorável, com ressalvas | Não determinável | Recuperar resposta T7 | Revisão independente pendente | Sem teste longitudinal | Pendente |
-| GPT-6 (T8) | R | Não se aplica: ChatGPT não foi usado na T7 | Não verificada independentemente | Não determinável | Recuperar resposta T7 | Revisão independente pendente | Resultados de referência não repetidos | Pendente |
+| GPT-6 (T8) | D | Não se aplica: ChatGPT não foi usado na T7 | Favorável quanto à disponibilidade pública, provisório | Não determinável | Consultar sínteses T7 por modelo | Revisão independente pendente | Clonagem falhou; não é teste do critério D em si | Pendente |
+| GPT-6 (T8) | F | Não se aplica: ChatGPT não foi usado na T7 | Não confirmada por execução | Não determinável | Consultar sínteses T7 por modelo | Arquivos citados precisam ser conferidos | Pipeline não executado | Pendente |
+| GPT-6 (T8) | S | Não se aplica: ChatGPT não foi usado na T7 | Estrutura favorável, com ressalvas | Não determinável | Consultar sínteses T7 por modelo | Revisão independente pendente | Sem teste longitudinal | Pendente |
+| GPT-6 (T8) | R | Não se aplica: ChatGPT não foi usado na T7 | Não verificada independentemente | Não determinável | Consultar sínteses T7 por modelo | Revisão independente pendente | Resultados de referência não repetidos | Pendente |
 
 ## 6. Como interpretar as diferenças
 
