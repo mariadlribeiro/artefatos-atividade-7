@@ -32,13 +32,13 @@ Este documento distingue tarefas concluídas de tarefas que dependem de acesso, 
 | Acesso documental via integração GitHub | Concluído parcialmente | Arquivos públicos puderam ser inspecionados |
 | Clone Git do repositório no ambiente de execução | Bloqueado por DNS; código 128 | Não houve clone local |
 | Pipeline de rede IoT-ID ponta a ponta | Não executado | Funcionalidade completa não confirmada nem refutada |
-| Recálculo isolado da fixture TCL | Registrado em script e relatório | Verifica serialização/hash da fixture, não o pipeline inteiro |
+| Recálculo isolado da fixture TCL | Executado em Python 3.13.5; hashes coincidiram; código 0 | Verifica serialização/hash da fixture, não o pipeline inteiro |
 | Repetição integral dos resultados dos autores | Não concluída | Reprodutibilidade integral permanece sem confirmação |
 | Transcrições literais integrais das rodadas GPT-6 anteriores | Não preservadas | Os relatórios atuais não podem ser citados como transcrições |
 
 ## 4. O que ainda é necessário para encerrar a investigação
 
-- [ ] Executar o script `verificar_hash_canonico_tcl.py` em ambiente Python e guardar a saída bruta, versão do Python e código de saída.
+- [x] Executar a lógica de `verificar_hash_canonico_tcl.py` em Python 3.13.5 e guardar a saída bruta em `docs/tarefa8/SAIDA_TESTE_HASH_TCL.md`; ambos os hashes esperados coincidiram (código de saída 0). **Limite:** execução sobre a fixture do script, não sobre o módulo original do IoT-ID.
 - [ ] Obter clone do artefato em ambiente com DNS/rede funcional; registrar commit SHA exato.
 - [ ] Verificar comandos de ajuda/CLI e testes de canonicalização/hash que possam ser executados sem dispositivo IoT.
 - [ ] Executar o pipeline ponta a ponta somente em LAN autorizada, com permissões e dispositivo de teste disponíveis; preservar logs, PCAPs permitidos, versões e comandos.
@@ -57,6 +57,6 @@ Este documento distingue tarefas concluídas de tarefas que dependem de acesso, 
 
 ## 6. Critério de encerramento
 
-A Tarefa 8 pode ser considerada **documentalmente organizada, mas experimentalmente incompleta** até que pelo menos a execução do teste isolado seja repetida em ambiente controlado e a limitação do pipeline completo seja resolvida ou formalmente mantida como limitação. Se a disciplina exigir execução real do artefato, a tarefa não deve ser marcada como concluída antes dessa etapa.
+A Tarefa 8 pode ser considerada **documentalmente organizada e com o teste isolado da fixture executado, mas experimentalmente incompleta** até que a limitação do pipeline completo seja resolvida ou formalmente mantida como limitação. Se a disciplina exigir execução real do artefato, a tarefa não deve ser marcada como concluída antes dessa etapa.
 
 Nenhum resultado ausente deve ser inventado, inferido a partir de outro LLM ou descrito como execução realizada.
