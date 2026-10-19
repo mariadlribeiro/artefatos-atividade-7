@@ -167,7 +167,7 @@ Os documentos resumidos da T7 registram:
 - **Grok:** avaliações favoráveis de disponibilidade e sustentabilidade, funcionalidade com limitações e reprodutibilidade com ressalvas; o fluxo de rede completo foi limitado pelo ambiente e pela ausência de dispositivo IoT adequado.
 - **Gemini:** limitações de rede impediram acesso suficiente; disponibilidade parcialmente verificável e F/S/R não verificáveis. O bloqueio de acesso não foi tratado como falha do artefato.
 
-Esses itens são **resumos existentes dos resultados da T7**, e não transcrições integrais das respostas originais. A resposta original do ChatGPT na T7 ainda não foi localizada; ela não deve ser reconstruída de memória ou apresentada como dado observado.
+Esses itens são **resumos existentes dos resultados da T7**, e não transcrições integrais das respostas originais. Conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7; portanto, não existe resposta ChatGPT-T7 a localizar ou reconstruir.
 
 ### 7.2 Comparação qualitativa
 
@@ -194,7 +194,7 @@ Essa comparação é provisória. Os resumos da T7 não possuem a mesma granular
 
 ## 9. Próximos passos para fechar o experimento
 
-- [ ] Localizar e arquivar a resposta original do ChatGPT na T7, se disponível.
+- [ ] Manter a linha de base T7 limitada aos modelos documentados; se surgir registro original adicional, atualizar o inventário com base nele.
 - [ ] Arquivar integralmente as respostas de cada rodada T8, sem reescrevê-las como se fossem transcrições.
 - [ ] Registrar data, nome de modelo exibido, esforço selecionado, prompt exato e limitações.
 - [ ] Fazer ao menos uma execução controlada em ambiente compatível, registrando SO, versões, dependências, comandos, código de saída e logs.
