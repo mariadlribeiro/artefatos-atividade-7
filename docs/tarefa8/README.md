@@ -20,6 +20,7 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 - [Script de verificação isolada](verificar_hash_canonico_tcl.py): cálculo local de SHA-256 para fixture derivada dos registros públicos da TCL.
 - [Comparação T7 × T8](COMPARACAO_T7_T8.md): comparação de estabilidade e concordância.
 - [Fluxograma](FLUXOGRAMA_T8.md): fluxo da atividade.
+- [Status de fechamento](STATUS_FECHAMENTO_T8.md): checklist do que foi verificado, limitações e condições restantes para concluir experimentalmente a T8.
 
 ## Situação dos resultados
 
@@ -30,6 +31,8 @@ As conclusões dessa resposta são provisórias. Uma auditoria documental e de c
 ## Pergunta de pesquisa
 
 As conclusões sobre os selos e as evidências do IoT-ID permanecem robustas quando mudamos a versão do modelo e/ou o esforço de raciocínio, mantendo o restante do protocolo tão constante quanto possível?
+
+**Limitação atual do desenho:** a T7 documenta Claude, Grok e Gemini; a T8 registra GPT-6. Como não há uma linha de base do mesmo modelo entre as tarefas, a comparação T7–T8 atual é exploratória e não isola o efeito da versão ou do esforço de raciocínio. Para responder causalmente sobre esforço, é necessária uma comparação controlada dentro da mesma família/versão, com o mesmo prompt e apenas o esforço alterado.
 
 ## Regras de integridade
 
