@@ -13,6 +13,7 @@ A linha de base resumida da Tarefa 7 está documentada em [../RESULTADOS_LLM.md]
 | ID | Provedor/modelo e versão | Esforço | Tipo de avaliação | D | F | S | R | Registro estruturado salvo? | Transcrição literal integral? | Evidências verificadas por revisão independente? |
 |---|---|---|---|---|---|---|---|---|---|
 | T8-GPT6-01 | GPT-6; versão exata não informada | Padrão | Analítica + tentativa de execução | Acesso público confirmado na auditoria | Não confirmada por execução completa | Estrutura documentada; sem teste longitudinal | Não confirmada; divergência histórica/código identificada | Sim | Não arquivada separadamente | Parcial: inspeção dos arquivos e recálculo de hash |
+| T8-GPT6-02 | GPT-6; versão exata não informada | Alto solicitado pela usuária; configuração não verificável independentemente | Analítica por consulta ao repositório público | Acesso público confirmado | Pipeline completo não executado | Estrutura documental favorável; sem teste longitudinal | Procedimento e hashes de referência encontrados; reprodução integral não demonstrada | Resumo analítico salvo; transcrição literal não recuperada | Não | Parcial: inspeção documental e nova verificação isolada stable/rich |
 | T8-C-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
 | T8-C-02 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
 | T8-G-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
@@ -40,7 +41,7 @@ Uma evidência é considerada verificada somente depois de abrir o arquivo, trec
 | ID | Ambiente e versões | Comando/procedimento | Resultado observado | Código de saída/log | Parte do fluxo executada | Limitação |
 |---|---|---|---|---|---|---|
 | T8-GPT6-01 | Linux x86_64; Python 3.13.5; requests 2.32.5, conforme resposta registrada | `git clone --depth 1 https://github.com/GT-IoTEdu/sbrc26_fingerprint.git /tmp/sbrc26_fingerprint` | Clonagem não concluída; erro de resolução DNS relatado | Código 128 relatado; log bruto não anexado | Nenhuma execução completa do pipeline confirmada | Falha de resolução DNS; nmap, nping, dumpcap, tshark, p0f e Docker relatados como ausentes |
-| A preencher | Pendente | Pendente | Pendente | Pendente | Pendente | Pendente |
+| T8-GPT6-02 | Ambiente da sessão atual; clone por Git tentou em shell Linux | `git clone --depth 1 https://github.com/GT-IoTEdu/sbrc26_fingerprint.git /tmp/iotid` | Falha: `Could not resolve host: github.com` | Código 128; saída do terminal observada | Nenhuma etapa do pipeline | DNS/rede sem resolução; inspeção via integração não substitui clone |
 
 O resultado da tentativa está registrado conforme a resposta do modelo, mas não há log bruto anexado. Não classificar como teste de funcionalidade concluído nem como falha do artefato. Se apenas alguns componentes forem executados no futuro, classificar como parcial e listar os componentes.
 
@@ -55,10 +56,21 @@ O resultado da tentativa está registrado conforme a resposta do modelo, mas nã
 
 Não converter campos pendentes em resultados negativos ou positivos. A avaliação qualitativa de uma resposta de LLM não equivale automaticamente a uma decisão oficial de atribuição de selo.
 
-## 6. Resumo parcial
+## 6. Resultado novo: verificação isolada da divergência stable/rich
 
-- **Variantes T8 com registro estruturado:** 1 (T8-GPT6-01).
-- **Transcrição literal integral da resposta:** não arquivada separadamente.
+Foi executado um teste local de serialização e SHA-256 sobre uma fixture baseada nos dados públicos da TCL Smart TV Pro. O script está em [`verificar_hash_canonico_tcl.py`](verificar_hash_canonico_tcl.py).
+
+| Política | Tamanho da string | Hash calculado | Correspondência |
+|---|---:|---|---|
+| stable | 203 caracteres | `3ce29174f6c15f666c6096b10ed456dc224910ed321fbe9c6086daaa7d6f2961` | Corresponde ao exemplo stable do estudo |
+| rich | 277 caracteres | `e20c48257b98e86fa11d7c4444e7e5da7176a1b328719ea5f46f831951392d51` | Corresponde ao hash histórico rotulado stable |
+
+O teste confirma a divergência entre o rótulo histórico e os campos da string. Não executa o pipeline original nem captura tráfego. O motivo histórico (por exemplo, versão antiga ou registro incorreto) permanece indeterminado.
+
+## 7. Resumo parcial
+
+- **Rodadas T8 registradas em forma estruturada:** 2 (T8-GPT6-01, esforço padrão; T8-GPT6-02, esforço alto solicitado). A segunda não tem transcrição literal preservada e o esforço não pode ser verificado independentemente.
+- **Transcrição literal integral das respostas anteriores:** não recuperada/arquivada separadamente; os arquivos existentes são registros estruturados ou relatórios, não cópias literais.
 - **Modelo exibido:** GPT-6.
 - **Esforço:** padrão.
 - **Versão exata:** não informada.
@@ -66,8 +78,8 @@ Não converter campos pendentes em resultados negativos ou positivos. A avaliaç
 - **Execução independente do pipeline:** não concluída.
 - **Motivo relatado:** falha de resolução DNS na clonagem e ausência de ferramentas de rede no ambiente.
 - **Selos que permaneceram estáveis ou mudaram:** ainda não determinado.
-- **Evidências novas verificadas diretamente:** arquivos principais existem; código/README foram inspecionados; uma string canônica histórica teve o SHA-256 recalculado e foi encontrada divergência entre o registro rotulado `stable` e o código atual.
+- **Evidências novas verificadas diretamente:** arquivos principais existem; README e canonicalização foram inspecionados; clone por Git falhou com código 128 por DNS; teste local da fixture confirmou hash stable `3ce29174...` e hash rich `e20c4825...`, este último correspondente ao registro histórico rotulado `stable`.
 - **Afirmações sem verificação independente:** ambiente e erro de clonagem da resposta original não têm log bruto anexado; o pipeline de rede completo não foi executado.
 - **Limitações:** a resposta é um resultado do modelo, não comprova reprodução do pipeline. A auditoria detalhada está em `AUDITORIA_EVIDENCIAS_T8_GPT6.md`; a resposta original de ChatGPT da T7 não foi localizada.
 
-A discussão final deve ser atualizada depois da recuperação da resposta original do ChatGPT da T7 e da coleta controlada de outras variantes.
+A comparação continua inconclusiva quanto à robustez entre configurações, pois falta a resposta original ChatGPT-T7 e a transcrição integral T8. A evidência stable/rich é uma descoberta técnica independente, mas não substitui a execução completa do pipeline.
