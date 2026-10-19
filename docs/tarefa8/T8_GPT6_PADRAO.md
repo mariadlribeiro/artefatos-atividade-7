@@ -6,8 +6,8 @@
 - **Configuração:** esforço de raciocínio padrão
 - **Prompt:** `docs/PROMPT_PADRONIZADO.md`
 - **Tipo de avaliação:** análise documental e de código; tentativa de execução independente não concluída
-- **Status do registro:** resposta preservada; conclusões provisórias
-- **Resposta integral original:** foi produzida na conversa da Tarefa 8. Este arquivo preserva o conteúdo e organiza as evidências para registro. As conclusões não equivalem a selos oficiais.
+- **Status do registro:** registro estruturado da resposta; conclusões provisórias
+- **Transcrição literal integral:** não foi preservada separadamente neste arquivo. Este documento organiza os pontos centrais e os detalhes de execução disponíveis no registro da conversa; não deve ser citado como transcrição palavra por palavra. As conclusões não equivalem a selos oficiais.
 
 ## 1. Síntese
 
@@ -128,7 +128,8 @@ A presença de hashes e logs no repositório comprova que os autores disponibili
 - **Execução independente do pipeline:** não concluída
 - **Motivo principal:** falha de resolução DNS ao clonar o repositório; ferramentas de rede ausentes no ambiente relatado
 - **Resultados D/F/S/R:** conclusões provisórias conforme as seções acima
-- **Resposta preservada no Git:** sim, neste arquivo
+- **Registro estruturado preservado no Git:** sim, neste arquivo
+- **Transcrição literal palavra por palavra:** não foi arquivada separadamente; não afirmar que este documento é uma cópia literal da resposta original
 - **Evidências verificadas diretamente por uma segunda revisão independente:** não
 - **Comparação com a resposta original do ChatGPT na Tarefa 7:** pendente de recuperar e conferir a resposta original
 
