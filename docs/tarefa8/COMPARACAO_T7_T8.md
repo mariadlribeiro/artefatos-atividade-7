@@ -6,14 +6,14 @@ Verificar se as avaliações registradas na Tarefa 7 são estáveis sob mudança
 
 ## 2. Linha de base da Tarefa 7
 
-| Critério | Claude — T7 | Grok — T7 | Gemini — T7 | Selo oficial |
-|---|---|---|---|---|
-| D | Atende, com ressalvas | Atende | Parcialmente verificável | Atribuído |
-| F | Execução parcial | Atende, com limitações | Não verificável | Atribuído |
-| S | Atende, com ressalvas | Atende | Não verificável | Atribuído |
-| R | Reprodução parcial, com divergências | Atende, com limitações | Não verificável | Atribuído |
+| Critério | Claude — T7 | Grok — T7 | Gemini — T7 | ChatGPT — T7 | Selo oficial |
+|---|---|---|---|---|---|
+| D | Atende, com ressalvas | Atende | Parcialmente verificável | Pendente de conferir resposta original | Atribuído |
+| F | Execução parcial | Atende, com limitações | Não verificável | Pendente de conferir resposta original | Atribuído |
+| S | Atende, com ressalvas | Atende | Não verificável | Pendente de conferir resposta original | Atribuído |
+| R | Reprodução parcial, com divergências | Atende, com limitações | Não verificável | Pendente de conferir resposta original | Atribuído |
 
-O registro da Tarefa 7 informa que o IoT-ID recebeu os quatro selos oficiais. Para a comparação formal, recuperar as respostas originais e confirmar os termos exatos usados em cada decisão. A tabela é uma síntese qualitativa, não uma equivalência automática entre “atende” e concessão formal de selo.
+O resumo documental existente registra resultados para Claude, Grok e Gemini. A responsável também informou que ChatGPT foi usado na Tarefa 7 e que todas as respostas originais estão guardadas. Até que a resposta do ChatGPT seja recuperada e conferida, seus resultados permanecem pendentes; não devem ser inferidos. O registro da Tarefa 7 informa que o IoT-ID recebeu os quatro selos oficiais. Para a comparação formal, confirmar os termos exatos nas respostas originais. A tabela é uma síntese qualitativa, não uma equivalência automática entre “atende” e concessão formal de selo.
 
 ## 3. Tabela comparativa T7 × T8
 
@@ -33,6 +33,10 @@ Preencher uma linha por critério e variante.
 | Gemini | F | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
 | Gemini | S | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
 | Gemini | R | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
+| ChatGPT | D | Pendente de conferir resposta original | Pendente | Pendente | Recuperar resposta T7 | Pendente | Pendente | Pendente |
+| ChatGPT | F | Pendente de conferir resposta original | Pendente | Pendente | Recuperar resposta T7 | Pendente | Pendente | Pendente |
+| ChatGPT | S | Pendente de conferir resposta original | Pendente | Pendente | Recuperar resposta T7 | Pendente | Pendente | Pendente |
+| ChatGPT | R | Pendente de conferir resposta original | Pendente | Pendente | Recuperar resposta T7 | Pendente | Pendente | Pendente |
 
 ## 4. Como interpretar as diferenças
 
