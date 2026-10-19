@@ -28,7 +28,36 @@ A resposta está preservada em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md). A interfa
 
 **Não concluir que os critérios mudaram.** A comparação não é possível até recuperar a resposta original de ChatGPT na T7 e verificar as evidências citadas na resposta T8. Além disso, a versão exata do modelo T8 não está informada, o que limita a reprodução da configuração.
 
-## 4. Tabela comparativa T7 × T8
+## 4. Evidências novas verificadas após a auditoria
+
+### 4.1 Recuperação da resposta original T7
+
+A busca no repositório e nos arquivos acessíveis não localizou a transcrição original do ChatGPT da T7. O resultado permanece **não recuperado**, sem inferir decisões D/F/S/R.
+
+### 4.2 Tentativa de execução do pipeline
+
+Foi realizada uma nova tentativa real de clonagem com:
+
+```bash
+git clone --depth 1 https://github.com/GT-IoTEdu/sbrc26_fingerprint.git /tmp/iotid
+```
+
+Resultado observado: `Could not resolve host: github.com`, código de saída 128. O repositório não foi clonado e o pipeline de rede não foi executado. Essa limitação ambiental não demonstra falha do artefato.
+
+### 4.3 Teste isolado de hash stable/rich
+
+Uma fixture baseada no registro público TCL Smart TV Pro foi serializada com as regras atuais de campos `stable` e `rich`, e o SHA-256 foi calculado localmente:
+
+| Política | Comprimento | SHA-256 calculado | Resultado |
+|---|---:|---|---|
+| stable | 203 caracteres | `3ce29174f6c15f666c6096b10ed456dc224910ed321fbe9c6086daaa7d6f2961` | Corresponde ao exemplo stable do estudo |
+| rich | 277 caracteres | `e20c48257b98e86fa11d7c4444e7e5da7176a1b328719ea5f46f831951392d51` | Corresponde ao hash histórico rotulado stable |
+
+O teste confirma que o hash histórico deriva da representação com `name` e `server` (rich), embora o log a rotule `stable`. Ele não executa o módulo original nem o pipeline de captura; é uma verificação isolada da serialização/hash da fixture. A causa histórica ainda não foi estabelecida.
+
+Consulte [registro de execução e rastreabilidade](EXECUCAO_E_RASTREABILIDADE_T8.md) e [script de verificação](verificar_hash_canonico_tcl.py).
+
+## 5. Tabela comparativa T7 × T8
 
 Preencher uma linha por critério e variante.
 
@@ -51,7 +80,7 @@ Preencher uma linha por critério e variante.
 | ChatGPT | S | Pendente de conferir resposta original | Estrutura favorável, com ressalvas | Não determinável | Recuperar resposta T7 | Revisão independente pendente | Sem teste longitudinal | Pendente |
 | ChatGPT | R | Pendente de conferir resposta original | Não verificada independentemente | Não determinável | Recuperar resposta T7 | Revisão independente pendente | Resultados de referência não repetidos | Pendente |
 
-## 5. Como interpretar as diferenças
+## 6. Como interpretar as diferenças
 
 Classificar cada comparação como:
 
@@ -63,7 +92,7 @@ Classificar cada comparação como:
 
 Não considerar uma resposta melhor apenas porque é mais longa, confiante ou usa linguagem mais técnica. Não tratar a falha de DNS como falha do artefato nem como evidência de mudança de critério.
 
-## 6. Perguntas para a discussão
+## 7. Perguntas para a discussão
 
 1. O esforço maior alterou as decisões ou apenas expandiu as justificativas?
 2. As novas evidências podem ser verificadas diretamente no repositório?
@@ -73,8 +102,8 @@ Não considerar uma resposta melhor apenas porque é mais longa, confiante ou us
 6. As diferenças podem ser explicadas por mudança de modelo, acesso, contexto ou ambiente?
 7. O resultado aponta robustez, sensibilidade ou falta de evidência para concluir?
 
-## 7. Conclusão — preencher após a coleta
+## 8. Conclusão parcial atualizada
 
 > Os resultados da Tarefa 8 indicam que as avaliações são **[robustas / parcialmente robustas / sensíveis às configurações / inconclusivas]** para os critérios **[preencher]**. A principal diferença observada foi **[preencher]**. Essa diferença foi sustentada por **[evidências verificadas / evidências insuficientes / diferença de ambiente]**. Portanto, **[responder à pergunta de pesquisa sem generalizar além das execuções realizadas]**.
 
-**Estado atual:** ainda não é possível classificar a robustez nem afirmar que houve mudança em D/F/S/R. Há uma resposta T8 registrada, mas a comparação T7 com ChatGPT e a revisão independente das evidências ainda estão pendentes. Não manter esta conclusão entre colchetes no relatório final; ela deve ser preenchida com resultados efetivamente obtidos.
+**Conclusão atualizada:** a robustez comparativa entre ChatGPT-T7 e T8 continua **inconclusiva**, pois a resposta original de ChatGPT-T7 não foi localizada e a resposta integral da rodada GPT-6 com esforço alto solicitado não está preservada como transcrição literal. A auditoria, entretanto, acrescentou uma evidência técnica verificável: a representação TCL rotulada historicamente como stable corresponde ao hash da política rich do código atual, enquanto a política stable descrita gera outro hash. A tentativa de execução completa foi bloqueada por DNS; portanto, essa nova evidência diz respeito à serialização/hash, não à execução do pipeline inteiro. Não atribuir essa diferença exclusivamente ao esforço do modelo nem concluir que o artefato inteiro falha em reprodutibilidade.
