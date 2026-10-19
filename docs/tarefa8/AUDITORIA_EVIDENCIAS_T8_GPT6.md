@@ -75,7 +75,7 @@ Seis arquivos `fingerprint_sha256.txt` de execuções TCL listadas em `testes/19
 | Os resultados de referência foram reproduzidos nesta avaliação | **Não**; apenas uma string canônica fornecida pelos autores teve seu hash recalculado |
 | O pipeline completo foi executado | **Não** |
 | A ausência de ferramentas/DNS relatada na resposta anterior foi reproduzida nesta auditoria | **Não**; o relato de ambiente anterior não tem log bruto anexado |
-| A resposta original do ChatGPT da T7 foi recuperada | **Não** |
+| ChatGPT foi utilizado na T7 | **Não**, conforme esclarecimento da responsável; item não aplicável como recuperação de resposta |
 | Há uma divergência entre registros históricos `stable` e código atual | Confirmada na comparação do log, da string armazenada e do código atual |
 
 ## 7. Efeito sobre D/F/S/R
