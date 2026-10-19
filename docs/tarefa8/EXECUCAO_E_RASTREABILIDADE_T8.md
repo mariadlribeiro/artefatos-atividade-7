@@ -5,13 +5,11 @@
 **Repositório do artefato:** https://github.com/GT-IoTEdu/sbrc26_fingerprint  
 **Branch consultada:** `main`
 
-## 1. Recuperação da resposta original ChatGPT — T7
+## 1. Esclarecimento sobre a linha de base da T7
 
-Foram consultados os documentos da Tarefa 7 disponíveis no repositório da atividade (`docs/RESULTADOS_LLM.md`, `docs/RELATORIO_COMPLETO.md`, `docs/PROMPT_PADRONIZADO.md`) e realizada busca nos arquivos acessíveis desta sessão.
+Os documentos disponíveis da Tarefa 7 (`docs/RESULTADOS_LLM.md`, `docs/RELATORIO_COMPLETO.md`, `docs/PROMPT_PADRONIZADO.md`) resumem avaliações de Claude, Grok e Gemini.
 
-**Resultado: não localizada.** Os documentos encontrados resumem Claude, Grok e Gemini; não contêm a transcrição original da avaliação ChatGPT da T7. A busca no contexto pessoal também falhou e não forneceu uma conversa recuperável. Isso não prova que a resposta não exista em outro chat ou arquivo; significa apenas que ela não foi recuperada pelos meios disponíveis nesta tentativa.
-
-**Decisão metodológica:** não reconstruir a resposta por inferência nem preencher D/F/S/R para ChatGPT-T7 a partir de resumos de outros modelos. Até que a transcrição seja localizada, manter como “não recuperada”.
+**Correção metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na Tarefa 7. Assim, não existe transcrição ChatGPT-T7 a recuperar e não se devem criar resultados D/F/S/R para esse modelo na linha de base. A comparação T7–T8 é exploratória entre os modelos documentados na T7 e GPT-6 na T8, não uma comparação longitudinal do mesmo modelo.
 
 ## 2. Integridade das transcrições T8
 
@@ -83,7 +81,7 @@ A divergência foi reproduzida no nível da **serialização/hash de uma fixture
 
 ## 6. Pendências para completar
 
-- [ ] Recuperar a transcrição original de ChatGPT-T7 de outro chat/arquivo, se disponível.
+- [ ] Confirmar, se necessário, se os documentos T7 disponíveis representam todos os modelos utilizados; os registros consultados documentam Claude, Grok e Gemini.
 - [ ] Copiar as respostas integrais de cada nova rodada T8 sem alterações e registrar ID, data, modelo exibido e esforço selecionado.
 - [ ] Obter o repositório por uma conexão com DNS funcional.
 - [ ] Executar os testes de ajuda/CLI e canonicalização em ambiente Python compatível.
@@ -93,6 +91,6 @@ A divergência foi reproduzida no nível da **serialização/hash de uma fixture
 
 ## 7. Conclusão
 
-Nesta sessão, a resposta original de ChatGPT-T7 e as transcrições literais das duas rodadas T8 anteriores não foram recuperadas. A tentativa real de clonagem do artefato falhou por DNS, impedindo a execução ponta a ponta. Foi possível, entretanto, realizar uma verificação isolada e reproduzível dos hashes stable/rich: o hash histórico corresponde à string rica de 277 caracteres, enquanto a política estável descrita no estudo gera a string de 203 caracteres e o hash `3ce29174...`. A causa histórica continua em aberto.
+Conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7, portanto não há transcrição ChatGPT-T7 a recuperar. As transcrições literais das duas rodadas T8 anteriores também não foram recuperadas. A tentativa real de clonagem do artefato falhou por DNS, impedindo a execução ponta a ponta. Foi possível, entretanto, realizar uma verificação isolada e reproduzível dos hashes stable/rich: o hash histórico corresponde à string rica de 277 caracteres, enquanto a política estável descrita no estudo gera a string de 203 caracteres e o hash `3ce29174...`. A causa histórica continua em aberto.
 
 Não há evidência suficiente para afirmar que o pipeline completo foi executado nesta sessão ou que os resultados dos critérios F/R foram integralmente reproduzidos.
