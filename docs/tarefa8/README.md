@@ -16,6 +16,8 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 - [Resultados da Tarefa 8](RESULTADOS_T8.md): registro das respostas e da verificação das evidências.
 - [Avaliação GPT-6 — esforço padrão](T8_GPT6_PADRAO.md): registro estruturado da resposta e conclusões provisórias.
 - [Auditoria de evidências T8](AUDITORIA_EVIDENCIAS_T8_GPT6.md): conferência dos caminhos, módulos, dependências, registros dos autores e recálculo parcial do hash.
+- [Execução e rastreabilidade T8](EXECUCAO_E_RASTREABILIDADE_T8.md): tentativa real de clonagem, resultado de DNS, limites da recuperação das transcrições e resultados stable/rich.
+- [Script de verificação isolada](verificar_hash_canonico_tcl.py): cálculo local de SHA-256 para fixture derivada dos registros públicos da TCL.
 - [Comparação T7 × T8](COMPARACAO_T7_T8.md): comparação de estabilidade e concordância.
 - [Fluxograma](FLUXOGRAMA_T8.md): fluxo da atividade.
 
@@ -23,7 +25,7 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 
 **Uma resposta da T8 foi registrada:** T8-GPT6-01, com nome de modelo exibido GPT-6, esforço padrão e data de 2026-10-19. A versão exata não foi informada. A resposta contém análise documental/de código e relata uma tentativa de clonagem que falhou por resolução DNS; o pipeline IoT-ID não foi executado integralmente.
 
-As conclusões dessa resposta são provisórias. Uma auditoria documental e de código já foi registrada; ela encontrou uma divergência entre registros históricos rotulados como `stable` e o código atual. O pipeline completo não foi executado. A recuperação da resposta original de ChatGPT na Tarefa 7 e a execução das demais variantes continuam pendentes. Não interpretar campos pendentes como resultados negativos ou positivos e não alterar os resultados originais da Tarefa 7.
+As conclusões dessa resposta são provisórias. Uma auditoria documental e de código já foi registrada; ela encontrou uma divergência entre registros históricos rotulados como `stable` e o código atual. Uma tentativa de clone por Git feita em shell nesta etapa também falhou por resolução DNS (código 128). Um teste isolado da fixture TCL confirmou que o hash histórico corresponde à representação `rich`, enquanto a representação `stable` gera o hash descrito no estudo. O pipeline completo não foi executado. A recuperação da resposta original de ChatGPT na Tarefa 7 e a execução das demais variantes continuam pendentes. Não interpretar campos pendentes como resultados negativos ou positivos e não alterar os resultados originais da Tarefa 7.
 
 ## Pergunta de pesquisa
 
