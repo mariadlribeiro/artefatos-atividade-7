@@ -17,7 +17,7 @@ Foram consultados:
 
 **Resultado:** a resposta original do ChatGPT da Tarefa 7 não foi localizada nas fontes acessíveis nesta auditoria. Os relatórios do repositório descrevem avaliações de Claude, Grok e Gemini; o `PROMPT_PADRONIZADO.md` afirma que o prompt foi usado como base para três avaliações. Isso confirma que o material atualmente registrado no repositório não contém uma linha de resultado do ChatGPT. Não prova que a responsável não tenha uma cópia salva em outro lugar.
 
-**Consequência:** as quatro decisões D/F/S/R do ChatGPT na T7 continuam pendentes. Não inferir os resultados a partir da resposta GPT-6 da T8 nem de outros LLMs. Para fechar a comparação, será necessário incorporar a resposta original ou registrar formalmente que não foi recuperada.
+**Correção metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7. Portanto, não há decisões D/F/S/R de ChatGPT-T7 a recuperar. A comparação entre T7 e T8 envolve modelos diferentes e deve ser interpretada como exploratória.
 
 ## 2. Existência dos arquivos citados na resposta T8
 
