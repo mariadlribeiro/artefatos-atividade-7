@@ -68,10 +68,11 @@ Copiar esta ficha para cada execução realizada:
 - **Prompt utilizado:** `docs/PROMPT_PADRONIZADO.md`
 - **Artefato/URL fornecido:** https://github.com/GT-IoTEdu/sbrc26_fingerprint
 - **Acesso ao repositório:** consulta a páginas/arquivos por integração relatada; clonagem por Git falhou por resolução DNS
-- **Resposta preservada em:** `docs/tarefa8/T8_GPT6_PADRAO.md`
+- **Registro estruturado preservado em:** `docs/tarefa8/T8_GPT6_PADRAO.md`
+- **Transcrição literal integral da resposta:** não arquivada separadamente
 - **Execução independente do pipeline:** não concluída
 - **Limitações registradas:** nmap, nping, dumpcap, tshark, p0f e Docker relatados como ausentes; erro de clonagem com código 128 relatado, sem log bruto anexado
-- **Observações:** revisar os caminhos/afirmações técnicas citados na resposta antes de considerar as evidências confirmadas independentemente.
+- **Observações:** o arquivo é um registro estruturado, não uma transcrição literal palavra por palavra. Revisar os caminhos/afirmações técnicas citados antes de considerar as evidências confirmadas independentemente.
 
 ## 6. Regras para comparabilidade
 
