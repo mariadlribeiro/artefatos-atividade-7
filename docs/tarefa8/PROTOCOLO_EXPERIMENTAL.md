@@ -14,6 +14,8 @@ A Tarefa 8 estende a Tarefa 7 para verificar a robustez das avaliações de arte
 
 A avaliação oficial atribuiu D, F, S e R ao artefato. Isso será tratado como referência de comparação, não como prova de que toda execução posterior necessariamente reproduzirá os resultados.
 
+**Limitação da linha de base disponível:** a T7 documenta Claude, Grok e Gemini, enquanto a T8 registra GPT-6. Portanto, a comparação atual entre tarefas é exploratória e não permite atribuir diferenças à mudança de versão ou esforço do mesmo modelo. Uma inferência sobre efeito do esforço exige rodadas controladas da mesma família/versão, com prompt e entradas equivalentes e apenas o esforço variado.
+
 ## 3. Pergunta de pesquisa
 
 As avaliações da Tarefa 7 são robustas quando se altera a versão do LLM e/ou o esforço de raciocínio?
