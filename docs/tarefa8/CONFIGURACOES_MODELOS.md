@@ -4,24 +4,23 @@ Este documento é o registro auditável das configurações efetivamente usadas.
 
 ## 1. Informações recuperadas até agora
 
-- **Ferramentas usadas na Tarefa 7, conforme informação da responsável:** Claude, Grok, Gemini e ChatGPT.
+- **Modelos documentados na Tarefa 7:** Claude, Grok e Gemini.
 - **Forma de acesso na Tarefa 7:** sites/interfaces das ferramentas.
-- **Respostas integrais da Tarefa 7:** a responsável informa que todas estão guardadas.
+- **Transcrições integrais da Tarefa 7:** não inventariadas neste repositório; os documentos consultados contêm sínteses de Claude, Grok e Gemini.
 - **Artefato avaliado:** IoT-ID — https://github.com/GT-IoTEdu/sbrc26_fingerprint.
 - **Situação da Tarefa 8:** primeira resposta registrada; revisão independente das evidências e demais variantes pendentes.
 
-**Pendência de reconciliação documental:** os arquivos atuais `docs/PROMPT_PADRONIZADO.md`, `docs/RESULTADOS_LLM.md` e `docs/RELATORIO_COMPLETO.md` descrevem três avaliações (Claude, Grok e Gemini), enquanto a responsável informa que também houve uma avaliação com ChatGPT na Tarefa 7. A resposta original do ChatGPT deve ser localizada e comparada com os demais registros antes de decidir se ela faz parte da linha de base comparável. Não inferir seu resultado nem excluí-la sem verificar a resposta guardada.
+**Nota metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na Tarefa 7. Os documentos disponíveis descrevem três avaliações (Claude, Grok e Gemini); esses são os modelos registrados na linha de base atual. Se surgir documentação original adicional sobre outro modelo, o inventário poderá ser atualizado, mas não se deve presumir uma avaliação ChatGPT-T7.
 
 ## 2. Linha de base da Tarefa 7
 
-| Provedor/modelo na T7 | Identificador exato | Data da avaliação original | Acesso | Esforço/configuração | Prompt/entrada recuperados? | Resposta integral guardada? |
+| Provedor/modelo na T7 | Identificador exato | Data da avaliação original | Acesso | Esforço/configuração | Prompt/entrada recuperados? | Transcrição integral inventariada? |
 |---|---|---|---|---|---|---|
-| Claude | Pendente de conferir na interface/resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais | Sim, conforme informação da responsável |
-| Grok | Pendente de conferir na interface/resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais | Sim, conforme informação da responsável |
-| Gemini | Pendente de conferir na interface/resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais | Sim, conforme informação da responsável |
-| ChatGPT | Pendente de conferir na interface/resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais e comparar com o prompt-base | Sim, conforme informação da responsável |
+| Claude | Pendente de conferir na resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais | Não neste repositório |
+| Grok | Pendente de conferir na resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais | Não neste repositório |
+| Gemini | Pendente de conferir na resposta original | Pendente | Site/interface | Pendente | Recuperar dos registros originais | Não neste repositório |
 
-Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini, mas não registram o ChatGPT na tabela de resultados. Os nomes comerciais não são suficientes para identificar o modelo exato; usar somente os dados visíveis na interface ou na resposta original. Se a interface não mostrar uma versão, registrar “não informado”.
+Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini. Os nomes comerciais não são suficientes para identificar o modelo exato; usar somente os dados visíveis na interface ou na resposta original. Se a interface não mostrar uma versão, registrar “não informado”.
 
 ## 3. Matriz planejada e execução registrada na T8
 
@@ -35,7 +34,7 @@ Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini, mas não registr
 | T8-GM-01 | Gemini | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
 | T8-GM-02 | Gemini | Mesmo identificador de T8-GM-01 | Esforço alto/máximo disponível | Esforço | A executar |
 
-**Importante:** a matriz mistura uma execução já registrada com variantes planejadas. Os demais itens são um plano, não um registro de execuções concluídas. O ChatGPT foi acrescentado ao registro da linha de base porque a responsável confirmou seu uso na T7; a comparação com T7 depende da recuperação da resposta original e da disponibilidade de controles comparáveis na interface. Se um provedor não oferecer um controle de esforço ou não permitir confirmar o modelo, marcar como indisponível e documentar a alternativa utilizada. Não comparar “esforço máximo” entre provedores como se fossem parâmetros equivalentes.
+**Importante:** a matriz mistura uma execução já registrada com variantes planejadas. Os demais itens são um plano, não um registro de execuções concluídas. ChatGPT aparece na T8 como modelo usado nas rodadas registradas, mas não faz parte da linha de base T7 conforme esclarecimento da responsável. Se um provedor não oferecer um controle de esforço ou não permitir confirmar o modelo, marcar como indisponível e documentar a alternativa utilizada. Não comparar “esforço máximo” entre provedores como se fossem parâmetros equivalentes.
 
 ## 4. Ficha a preencher por execução
 
