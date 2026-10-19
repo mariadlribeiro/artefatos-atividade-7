@@ -7,17 +7,11 @@
 - **Natureza:** revisão documental/código + verificação independente parcial de hash; não é execução do pipeline de rede
 - **Integridade:** nenhum arquivo do repositório do artefato foi alterado.
 
-## 1. Busca da resposta original do ChatGPT na Tarefa 7
+## 1. Linha de base da Tarefa 7
 
-Foram consultados:
-- `docs/PROMPT_PADRONIZADO.md`
-- `docs/RESULTADOS_LLM.md`
-- `docs/RELATORIO_COMPLETO.md`
-- A biblioteca de arquivos acessível no ChatGPT, por busca semântica e listagem dos arquivos disponíveis.
+Foram consultados `docs/PROMPT_PADRONIZADO.md`, `docs/RESULTADOS_LLM.md` e `docs/RELATORIO_COMPLETO.md`. Os documentos registram avaliações de Claude, Grok e Gemini.
 
-**Resultado:** a resposta original do ChatGPT da Tarefa 7 não foi localizada nas fontes acessíveis nesta auditoria. Os relatórios do repositório descrevem avaliações de Claude, Grok e Gemini; o `PROMPT_PADRONIZADO.md` afirma que o prompt foi usado como base para três avaliações. Isso confirma que o material atualmente registrado no repositório não contém uma linha de resultado do ChatGPT. Não prova que a responsável não tenha uma cópia salva em outro lugar.
-
-**Correção metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7. Portanto, não há decisões D/F/S/R de ChatGPT-T7 a recuperar. A comparação entre T7 e T8 envolve modelos diferentes e deve ser interpretada como exploratória.
+**Correção metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7. Portanto, não há resposta ChatGPT-T7 a recuperar nem decisões D/F/S/R desse modelo para preencher. A comparação entre T7 e T8 envolve modelos diferentes e deve ser interpretada como exploratória.
 
 ## 2. Existência dos arquivos citados na resposta T8
 
