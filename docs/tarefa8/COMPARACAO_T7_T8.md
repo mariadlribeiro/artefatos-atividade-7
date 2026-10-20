@@ -15,16 +15,16 @@ Verificar se as avaliações registradas na Tarefa 7 são estáveis sob mudança
 
 Os documentos disponíveis registram avaliações de Claude, Grok e Gemini na Tarefa 7. Conforme esclarecimento da responsável, ChatGPT não foi utilizado na Tarefa 7; portanto, não existe uma avaliação ChatGPT-T7 a recuperar e ela não deve aparecer como linha de base. O registro da Tarefa 7 informa que o IoT-ID recebeu os quatro selos oficiais. A tabela é uma síntese qualitativa, não uma equivalência automática entre “atende” e concessão formal de selo.
 
-## 3. T8 — primeira resposta registrada: GPT-6, esforço padrão
+## 3. T8 — rodadas registradas de GPT-6
 
-A resposta está preservada em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md). A interface exibiu “GPT-6”; a versão exata não foi informada. A análise registrou uma tentativa de clonagem que falhou por resolução DNS e não confirmou execução do pipeline IoT-ID. Assim, a primeira resposta permite comparar a análise declarada pelo modelo, mas ainda não permite concluir que o artefato foi reproduzido.
+A T8 contém duas rodadas registradas em formato estruturado: T8-GPT6-01, com esforço padrão, e T8-GPT6-02, com esforço alto solicitado pela usuária. A interface exibiu “GPT-6” em ambos os casos; a versão exata não foi informada e o esforço da segunda rodada não pode ser verificado independentemente. Os arquivos existentes são resumos analíticos, não transcrições literais integrais. As tentativas de execução não concluíram o pipeline IoT-ID; portanto, não demonstram reprodução integral do artefato.
 
-| Critério | Síntese T7 (Claude/Grok/Gemini) | T8-GPT6-01: resposta registrada | Mudança T7→T8? | Estado da evidência |
+| Critério | Síntese T7 (Claude/Grok/Gemini) | T8-GPT6-01: esforço padrão | T8-GPT6-02: esforço alto solicitado | Mudança T7→T8? | Estado da evidência |
 |---|---|---|---|---|
-| D | Atende com ressalvas / atende / parcialmente verificável | Disponibilidade pública/documental considerada favorável | Não determinável entre famílias | Revisão independente pendente |
-| F | Execução parcial / atende com limitações / não verificável | Funcionalidade não confirmada por execução | Não determinável entre famílias | Pipeline não executado; arquivos citados precisam ser conferidos |
-| S | Atende com ressalvas / atende / não verificável | Estrutura considerada favorável, com ressalvas | Não determinável entre famílias | Inferência estrutural; sem avaliação longitudinal |
-| R | Reprodução parcial com divergências / atende com limitações / não verificável | Reprodutibilidade independente não verificada | Não determinável entre famílias | Resultados de referência não foram repetidos |
+| D | Atende com ressalvas / atende / parcialmente verificável | Disponibilidade pública/documental considerada favorável | Disponibilidade pública/documental considerada favorável | Não determinável entre famílias | Revisão independente parcial |
+| F | Execução parcial / atende com limitações / não verificável | Funcionalidade não confirmada por execução | Pipeline não confirmado por execução | Não determinável entre famílias | Pipeline completo não executado; testes parciais não substituem execução ponta a ponta |
+| S | Atende com ressalvas / atende / não verificável | Estrutura considerada favorável, com ressalvas | Estrutura considerada favorável, com ressalvas | Não determinável entre famílias | Inferência estrutural; sem avaliação longitudinal |
+| R | Reprodução parcial com divergências / atende com limitações / não verificável | Reprodutibilidade independente não verificada | Reprodutibilidade independente não verificada; divergência stable/rich investigada | Não determinável entre famílias | Pipeline completo e resultados de referência não foram reproduzidos integralmente |
 
 **Não concluir que os critérios mudaram.** A comparação é exploratória entre famílias de modelos diferentes: Claude, Grok e Gemini na T7 e GPT-6 nas rodadas registradas da T8. Não é uma comparação longitudinal do ChatGPT entre T7 e T8. Além disso, a versão exata do modelo T8 não está informada, o que limita a reprodução da configuração.
 
