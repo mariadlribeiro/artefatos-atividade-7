@@ -15,6 +15,7 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 - [Prompts](PROMPTS.md): prompt-base e instruções para as variantes.
 - [Resultados da Tarefa 8](RESULTADOS_T8.md): registro das respostas e da verificação das evidências.
 - [Avaliação GPT-6 — esforço padrão](T8_GPT6_PADRAO.md): registro estruturado da resposta e conclusões provisórias.
+- [Relatório analítico da segunda rodada GPT-6](RELATORIO_COMPLETO_T8.md): registro da avaliação com esforço alto solicitado, sem transcrição literal integral e sem verificação independente do esforço.
 - [Auditoria de evidências T8](AUDITORIA_EVIDENCIAS_T8_GPT6.md): conferência dos caminhos, módulos, dependências, registros dos autores e recálculo parcial do hash.
 - [Execução e rastreabilidade T8](EXECUCAO_E_RASTREABILIDADE_T8.md): tentativa real de clonagem, resultado de DNS, limites da recuperação das transcrições e resultados stable/rich.
 - [Adendo histórico da canonicalização TCL](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md): análise dos commits de 24 e 25/03/2026 e explicação provável para a divergência stable/rich.
