@@ -94,3 +94,12 @@ A divergência foi reproduzida no nível da **serialização/hash de uma fixture
 Conforme esclarecimento da responsável, ChatGPT não foi utilizado na T7, portanto não há transcrição ChatGPT-T7 a recuperar. As transcrições literais das duas rodadas T8 anteriores também não foram recuperadas. A tentativa real de clonagem do artefato falhou por DNS, impedindo a execução ponta a ponta. Foi possível, entretanto, realizar uma verificação isolada e reproduzível dos hashes stable/rich: o hash histórico corresponde à string rica de 277 caracteres, enquanto a política estável descrita no estudo gera a string de 203 caracteres e o hash `3ce29174...`. A causa histórica continua em aberto.
 
 Não há evidência suficiente para afirmar que o pipeline completo foi executado nesta sessão ou que os resultados dos critérios F/R foram integralmente reproduzidos.
+
+
+## 8. Investigação histórica complementar (20/10/2026)
+
+A consulta ao histórico Git refinou a explicação para a divergência de canonicalização. O commit `00f38c003de12c9140695baaac4039d12b48ddf7` (“Update canonicalize_features.py”, 24/03/2026) incluía os campos Nmap `server`, `name`, `manufacturer` e `model_name` quando disponíveis, sem a condição atual que restringe os dois primeiros à política `rich`. O commit `f2b8930d3ac1bd91b08deee7b99a804bbc533521` (“fingerprint_iot_update”, 25/03/2026) introduziu essa distinção para dispositivos IoT.
+
+Isso é compatível com o log de 24/03: embora indique `canon_policy=stable`, a representação contém `name` e `server` e gera o hash hoje reproduzido pela política `rich`. A hipótese mais consistente é uma mudança de comportamento entre versões. Entretanto, o log não registra o SHA do código em execução, portanto a versão exata que gerou o registro continua não comprovada.
+
+O detalhamento das evidências, dos hashes e dos limites de atribuição está em [Adendo histórico da canonicalização TCL](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md). Esta investigação melhora a rastreabilidade do critério R, mas não substitui a execução integral do pipeline.
