@@ -91,7 +91,7 @@ Essas conclusões são resultados desta auditoria, não decisões oficiais de co
 
 ## 8. Variantes de LLM/esforço
 
-Não foi possível controlar o seletor de modelo/esforço da interface ChatGPT por meio das ferramentas disponíveis nesta sessão, nem executar diretamente Claude, Grok ou Gemini com configurações controladas. Assim, **nenhuma nova variante de LLM/esforço é declarada como executada**. A resposta T8-GPT6-01 permanece a única resposta de variante registrada. Não comparar uma nova resposta sem identificar modelo e esforço reais.
+Esta auditoria técnica não executou um novo experimento controlado de LLM nem conseguiu controlar/verificar independentemente o seletor de modelo/esforço. No conjunto documental da T8, há dois registros analíticos estruturados: T8-GPT6-01 (esforço padrão) e T8-GPT6-02 (esforço alto solicitado). O segundo é um registro de avaliação analítica, mas o esforço efetivo não foi verificado independentemente e a transcrição literal integral não está arquivada; por isso, não o tratar como comparação experimental controlada concluída. Também não foram executadas variantes controladas de Claude, Grok ou Gemini na T8.
 
 Para realizar a comparação controlada, executar manualmente o mesmo prompt em duas configurações disponíveis, salvar cada resposta integral sem edição e registrar o nome de modelo e o esforço exatamente como exibidos. Não presumir equivalência de esforços entre provedores.
 
