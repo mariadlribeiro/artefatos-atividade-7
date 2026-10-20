@@ -8,7 +8,7 @@ Este documento é o registro auditável das configurações efetivamente usadas.
 - **Forma de acesso na Tarefa 7:** sites/interfaces das ferramentas.
 - **Transcrições integrais da Tarefa 7:** não inventariadas neste repositório; os documentos consultados contêm sínteses de Claude, Grok e Gemini.
 - **Artefato avaliado:** IoT-ID — https://github.com/GT-IoTEdu/sbrc26_fingerprint.
-- **Situação da Tarefa 8:** primeira resposta registrada; revisão independente das evidências e demais variantes pendentes.
+- **Situação da Tarefa 8:** duas rodadas GPT-6 registradas em forma estruturada (esforço padrão e esforço alto solicitado); revisão independente parcial; demais variantes planejadas pendentes. Transcrições literais integrais não preservadas separadamente.
 
 **Nota metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na Tarefa 7. Os documentos disponíveis descrevem três avaliações (Claude, Grok e Gemini); esses são os modelos registrados na linha de base atual. Se surgir documentação original adicional sobre outro modelo, o inventário poderá ser atualizado, mas não se deve presumir uma avaliação ChatGPT-T7.
 
@@ -26,7 +26,7 @@ Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini. Os nomes comerci
 
 | ID | Família/modelo | Configuração de referência | Variante | Única variável alterada | Status |
 |---|---|---|---|---|---|
-| T8-GPT6-01 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço padrão | Configuração registrada para primeira execução | Resposta obtida; tentativa de execução independente não concluída; revisão de evidências pendente |
+| T8-GPT6-01 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço padrão | Configuração registrada para primeira execução | Rodada registrada em resumo estruturado; tentativa de execução independente não concluída; revisão de evidências parcial |\n| T8-GPT6-02 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço alto solicitado pela usuária; não verificável independentemente | Esforço solicitado/registrado; versão exata não informada | Rodada analítica registrada em resumo estruturado; pipeline completo não executado; transcrição literal integral não preservada |
 | T8-C-01 | Claude | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
 | T8-C-02 | Claude | Mesmo identificador de T8-C-01 | Esforço alto/máximo disponível | Esforço | A executar |
 | T8-G-01 | Grok | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
@@ -34,7 +34,7 @@ Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini. Os nomes comerci
 | T8-GM-01 | Gemini | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
 | T8-GM-02 | Gemini | Mesmo identificador de T8-GM-01 | Esforço alto/máximo disponível | Esforço | A executar |
 
-**Importante:** a matriz mistura uma execução já registrada com variantes planejadas. Os demais itens são um plano, não um registro de execuções concluídas. ChatGPT aparece na T8 como modelo usado nas rodadas registradas, mas não faz parte da linha de base T7 conforme esclarecimento da responsável. Se um provedor não oferecer um controle de esforço ou não permitir confirmar o modelo, marcar como indisponível e documentar a alternativa utilizada. Não comparar “esforço máximo” entre provedores como se fossem parâmetros equivalentes.
+**Importante:** T8-GPT6-01 e T8-GPT6-02 são rodadas registradas; T8-C-01/02, T8-G-01/02 e T8-GM-01/02 são variantes planejadas, não execuções concluídas. ChatGPT aparece na T8 como modelo usado nas duas rodadas registradas, mas não faz parte da linha de base T7 conforme esclarecimento da responsável. Se um provedor não oferecer um controle de esforço ou não permitir confirmar o modelo, marcar como indisponível e documentar a alternativa utilizada. Não comparar “esforço máximo” entre provedores como se fossem parâmetros equivalentes.
 
 ## 4. Ficha a preencher por execução
 
