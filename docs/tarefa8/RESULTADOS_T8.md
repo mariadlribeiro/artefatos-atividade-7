@@ -2,9 +2,9 @@
 
 ## 1. Estado da coleta
 
-**Status: uma resposta T8 registrada; auditoria independente parcial concluída; demais variantes pendentes.** A execução T8-GPT6-01 foi obtida em 2026-10-19 usando o nome de modelo exibido GPT-6 e esforço de raciocínio padrão. A versão exata não foi informada. O registro estruturado está em [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md). Ele não é uma transcrição literal palavra por palavra; a transcrição integral original não foi arquivada separadamente. A auditoria das afirmações e arquivos citados está em [AUDITORIA_EVIDENCIAS_T8_GPT6.md](AUDITORIA_EVIDENCIAS_T8_GPT6.md).
+**Status: duas rodadas GPT-6 registradas em formato estruturado; auditoria independente parcial concluída; demais variantes planejadas pendentes.** T8-GPT6-01 foi registrada em 2026-10-19 com esforço padrão; T8-GPT6-02 foi registrada na mesma data com esforço alto solicitado pela usuária. Em ambas, o nome exibido foi GPT-6 e a versão exata não foi informada. Na segunda rodada, o nível de esforço é metadado solicitado/registrado, não verificado independentemente. Os registros estruturados não são transcrições literais integrais, e as respostas originais completas não foram arquivadas separadamente. Consulte [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md), o relatório analítico da segunda rodada e [AUDITORIA_EVIDENCIAS_T8_GPT6.md](AUDITORIA_EVIDENCIAS_T8_GPT6.md).
 
-Esta execução contém análise documental e de código relatada pelo modelo e uma tentativa de execução independente que não foi concluída. Portanto, não representa uma execução bem-sucedida do pipeline IoT-ID, nem uma verificação independente de todas as afirmações da resposta.
+As rodadas contêm análise documental/código e registros de tentativas de execução que não concluíram o pipeline completo. Portanto, nenhuma delas representa execução bem-sucedida do pipeline IoT-ID, nem verificação independente de todas as afirmações produzidas.
 
 A linha de base resumida da Tarefa 7 está documentada em [../RESULTADOS_LLM.md](../RESULTADOS_LLM.md). Os resultados oficiais do evento estão em https://doc-artefatos.github.io/sbrc2026/results.html.
 
@@ -72,9 +72,9 @@ O teste confirma a divergência entre o rótulo histórico e os campos da string
 - **Rodadas T8 registradas em forma estruturada:** 2 (T8-GPT6-01, esforço padrão; T8-GPT6-02, esforço alto solicitado). A segunda não tem transcrição literal preservada e o esforço não pode ser verificado independentemente.
 - **Transcrição literal integral das respostas anteriores:** não recuperada/arquivada separadamente; os arquivos existentes são registros estruturados ou relatórios, não cópias literais.
 - **Modelo exibido:** GPT-6.
-- **Esforço:** padrão.
+- **Esforço registrado:** padrão na T8-GPT6-01; alto solicitado na T8-GPT6-02, sem verificação independente do nível efetivo.
 - **Versão exata:** não informada.
-- **Avaliação analítica:** resposta obtida e preservada.
+- **Avaliação analítica:** duas respostas registradas em forma estruturada; transcrições integrais não preservadas separadamente.
 - **Execução independente do pipeline:** não concluída.
 - **Motivo relatado:** falha de resolução DNS na clonagem e ausência de ferramentas de rede no ambiente.
 - **Selos que permaneceram estáveis ou mudaram:** ainda não determinado.
