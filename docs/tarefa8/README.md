@@ -17,6 +17,7 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 - [Avaliação GPT-6 — esforço padrão](T8_GPT6_PADRAO.md): registro estruturado da resposta e conclusões provisórias.
 - [Auditoria de evidências T8](AUDITORIA_EVIDENCIAS_T8_GPT6.md): conferência dos caminhos, módulos, dependências, registros dos autores e recálculo parcial do hash.
 - [Execução e rastreabilidade T8](EXECUCAO_E_RASTREABILIDADE_T8.md): tentativa real de clonagem, resultado de DNS, limites da recuperação das transcrições e resultados stable/rich.
+- [Adendo histórico da canonicalização TCL](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md): análise dos commits de 24 e 25/03/2026 e explicação provável para a divergência stable/rich.
 - [Script de verificação isolada](verificar_hash_canonico_tcl.py): cálculo local de SHA-256 para fixture derivada dos registros públicos da TCL.
 - [Comparação T7 × T8](COMPARACAO_T7_T8.md): comparação de estabilidade e concordância.
 - [Fluxograma](FLUXOGRAMA_T8.md): fluxo da atividade.
