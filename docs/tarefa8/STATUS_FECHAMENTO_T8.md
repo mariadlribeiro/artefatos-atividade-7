@@ -60,3 +60,17 @@ Este documento distingue tarefas concluídas de tarefas que dependem de acesso, 
 A Tarefa 8 pode ser considerada **documentalmente organizada e com o teste isolado da fixture executado, mas experimentalmente incompleta** até que a limitação do pipeline completo seja resolvida ou formalmente mantida como limitação. Se a disciplina exigir execução real do artefato, a tarefa não deve ser marcada como concluída antes dessa etapa.
 
 Nenhum resultado ausente deve ser inventado, inferido a partir de outro LLM ou descrito como execução realizada.
+
+
+## 7. Atualização de 20/10/2026 — histórico de canonicalização
+
+- [x] Consultar o histórico Git de `canonicalize_features.py` no clone local.
+- [x] Inspecionar a versão do commit `00f38c003de12c9140695baaac4039d12b48ddf7`, datado de 24/03/2026.
+- [x] Inspecionar o diff de `f2b8930d3ac1bd91b08deee7b99a804bbc533521`, datado de 25/03/2026.
+- [x] Confirmar que a versão anterior incluía os quatro campos Nmap disponíveis sem restringi-los pela política.
+- [x] Confirmar que a alteração posterior passou a restringir `server` e `name` à política `rich` para IoT.
+- [x] Documentar uma explicação provável para o registro histórico rotulado `stable` que contém os campos de `rich`.
+
+**Limite mantido:** como o log não registra o SHA do commit executado, a versão exata que gerou a captura de 24/03 não está comprovada. O pipeline completo continua não executado; a tarefa permanece experimentalmente incompleta se a disciplina exigir execução ponta a ponta.
+
+Detalhes: [Adendo histórico da canonicalização TCL](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md).
