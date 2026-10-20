@@ -26,7 +26,8 @@ Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini. Os nomes comerci
 
 | ID | Família/modelo | Configuração de referência | Variante | Única variável alterada | Status |
 |---|---|---|---|---|---|
-| T8-GPT6-01 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço padrão | Configuração registrada para primeira execução | Rodada registrada em resumo estruturado; tentativa de execução independente não concluída; revisão de evidências parcial |\n| T8-GPT6-02 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço alto solicitado pela usuária; não verificável independentemente | Esforço solicitado/registrado; versão exata não informada | Rodada analítica registrada em resumo estruturado; pipeline completo não executado; transcrição literal integral não preservada |
+| T8-GPT6-01 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço padrão | Configuração registrada para primeira execução | Rodada registrada em resumo estruturado; tentativa de execução independente não concluída; revisão de evidências parcial |
+| T8-GPT6-02 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço alto solicitado pela usuária; não verificável independentemente | Esforço solicitado/registrado; versão exata não informada | Rodada analítica registrada em resumo estruturado; pipeline completo não executado; transcrição literal integral não preservada |
 | T8-C-01 | Claude | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
 | T8-C-02 | Claude | Mesmo identificador de T8-C-01 | Esforço alto/máximo disponível | Esforço | A executar |
 | T8-G-01 | Grok | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
