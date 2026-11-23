@@ -39,10 +39,10 @@ Este documento distingue tarefas concluídas de tarefas que dependem de acesso, 
 ## 4. O que ainda é necessário para encerrar a investigação
 
 - [x] Executar a lógica de `verificar_hash_canonico_tcl.py` em Python 3.13.5 e guardar a saída bruta em `docs/tarefa8/SAIDA_TESTE_HASH_TCL.md`; ambos os hashes esperados coincidiram (código de saída 0). **Limite:** execução sobre a fixture do script, não sobre o módulo original do IoT-ID.
-- [ ] Obter clone do artefato em ambiente com DNS/rede funcional; registrar commit SHA exato.
-- [ ] Verificar comandos de ajuda/CLI e testes de canonicalização/hash que possam ser executados sem dispositivo IoT.
+- [x] Obter clone do artefato em ambiente com DNS/rede funcional; registrar commit SHA exato. **Feito em 23/11/2026:** commit `167f48792858630020a408147ade001e5c977f78` (ver [verificação completa](VERIFICACAO_COMPLETA_ARTEFATO.md)).
+- [x] Verificar comandos de ajuda/CLI e testes de canonicalização/hash que possam ser executados sem dispositivo IoT. **Feito em 23/11/2026:** `iot_id_fingerprint.py --help` (código 0); `fingerprint_hash.py` e o módulo original de canonicalização executados sobre as 22 execuções de `testes/`. Resultado: 9/22 reproduzem com `stable`, 6 (TCL) só com `rich`, 7 (Xiaomi e duas do IP `.100`) com nenhuma política.
 - [ ] Executar o pipeline ponta a ponta somente em LAN autorizada, com permissões e dispositivo de teste disponíveis; preservar logs, PCAPs permitidos, versões e comandos.
-- [ ] Identificar o commit do código que produziu a execução TCL de 24/03/2026 e comparar essa versão histórica com a atual.
+- [ ] Identificar o commit do código que produziu a execução TCL de 24/03/2026 e comparar essa versão histórica com a atual. *(Parcial: o [adendo](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md) explica o TCL; a [verificação completa](VERIFICACAO_COMPLETA_ARTEFATO.md) mostra o mesmo padrão temporal, com todas as execuções de 24/03 que têm mais campos que o TTL divergindo e todas as de 25/03 reproduzindo, mas o caso Xiaomi segue sem causa determinada.)*
 - [ ] Para novas avaliações LLM, salvar prompt e resposta literal integral imediatamente, com data, modelo exibido e configuração selecionada.
 - [ ] Se a pergunta de pesquisa continuar sendo sobre efeito do esforço de raciocínio, fazer comparação controlada com a mesma família/versão e o mesmo prompt, alterando apenas o esforço quando essa opção estiver disponível e identificável.
 - [ ] Se não for possível controlar a versão ou o esforço, declarar a comparação como exploratória e não atribuir causalidade à configuração.
