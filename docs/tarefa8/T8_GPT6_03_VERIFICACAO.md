@@ -7,8 +7,8 @@ Resposta bruta: [respostas/T8-GPT6-03.md](respostas/T8-GPT6-03.md). Referência 
 | Campo | Valor |
 |---|---|
 | Provedor / interface | ChatGPT (web) |
-| Modelo exibido | **a confirmar** |
-| Esforço / modo | **a confirmar** |
+| Plano / modelo | **Plano gratuito**, modelo padrão do plano (nome exato não registrado) |
+| Esforço / modo | **Padrão**: nenhum nível de raciocínio selecionado |
 | Prompt | `docs/PROMPT_PADRONIZADO.md`, sem alterações |
 | Data | 23/11/2026 |
 | Acessou o repositório? | Por consulta web (cita "GitHub+1"); clone por Git falhou (DNS, código 128) |
@@ -65,4 +65,4 @@ ChatGPT não fez parte da T7. Esta rodada não preenche a matriz Claude/Grok/Gem
 
 As três rodadas chegam ao mesmo veredito qualitativo para D, F e R: **estabilidade intra-provedor**. A diferença está na profundidade. Segundo o relatório, só a rodada de esforço alto (T8-GPT6-02) apontou a divergência `stable`/`rich`. A T8-GPT6-03 recalculou o mesmo hash, mas não confrontou a CANON_STRING com o código.
 
-**Depende da configuração desta rodada:** se T8-GPT6-03 usou esforço padrão, o resultado é coerente com a hipótese de que mais esforço leva a uma verificação mais profunda. Se usou esforço alto, isso mostra que a detecção não é estável nem com o mesmo esforço. Por isso é essencial confirmar o modelo e o esforço desta rodada. O relatório de T8-GPT6-02 não é uma transcrição literal; convém conferir se a divergência foi apontada pelo modelo ou pela revisão.
+**Interpretação (esforço padrão, plano gratuito):** as duas rodadas com esforço padrão (T8-GPT6-01 e T8-GPT6-03) **não** detectaram a divergência `stable`/`rich`; a única com esforço alto (T8-GPT6-02) detectou. O padrão é **coerente** com a hipótese de que mais esforço leva a uma verificação mais profunda, mas **não a comprova**: são só três rodadas, e o plano gratuito pode usar um modelo diferente do registrado como "GPT-6" nas rodadas anteriores. Isso é um fator de confusão de versão, porque o nome exato do modelo não foi registrado. O relatório de T8-GPT6-02 não é uma transcrição literal; convém conferir se a divergência foi apontada pelo modelo ou pela revisão.
