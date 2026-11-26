@@ -63,18 +63,18 @@ Preencher uma linha por critério e variante.
 
 | Provedor/família | Critério | T7: decisão | T8: decisão | Mudança? | Evidência T7 | Evidência T8 verificada | Execução | Relação com selo oficial |
 |---|---|---|---|---|---|---|---|---|
-| Claude | D | Atende, com ressalvas | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Claude | F | Execução parcial | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Claude | S | Atende, com ressalvas | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Claude | R | Reprodução parcial, com divergências | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Grok | D | Atende | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Grok | F | Atende, com limitações | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Grok | S | Atende | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Grok | R | Atende, com limitações | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Gemini | D | Parcialmente verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Gemini | F | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Gemini | S | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
-| Gemini | R | Não verificável | Pendente | Pendente | Consultar T7 | Pendente | Pendente | Pendente |
+| Claude | D | Atende, com ressalvas | C-01: atendido c/ ressalvas; C-02: sustentado | Estável | Consultar T7 | Repositório público, sem LICENSE, sem release (conf.) | Clone OK | Concorda |
+| Claude | F | Execução parcial | C-01 e C-02: atendido/sustentado c/ ressalvas | Mudança sustentada (acesso/execução) | Consultar T7 | Python 3.8/3.9 falham; Docker sem `sudo`; saída 0 em falha (conf.) | Pipeline completo em laboratório emulado | Concorda |
+| Claude | S | Atende, com ressalvas | C-01 e C-02: atendido/sustentado c/ ressalvas | Estável | Consultar T7 | Sem testes/CI; duplicação; parser `Name:` (conf.) | — | Concorda |
+| Claude | R | Reprodução parcial, com divergências | C-01 e C-02: parcial | Estável | Consultar T7 | TCL só `rich`; Xiaomi irreprodutível; `5b60133e` só TTL (conf.) | Claims qualitativas reproduzidas em laboratório; recomputação 9/22 | **Diverge** (sustentado por evidência) |
+| Grok | D | Atende | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Grok | F | Atende, com limitações | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Grok | S | Atende | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Grok | R | Atende, com limitações | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Gemini | D | Parcialmente verificável | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Gemini | F | Não verificável | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Gemini | S | Não verificável | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
+| Gemini | R | Não verificável | Não realizada (protocolo §11) | — | Consultar T7 | — | — | — |
 | GPT-6 (T8) | D | Não se aplica: ChatGPT não foi usado na T7 | Favorável quanto à disponibilidade pública, provisório | Não determinável | Consultar sínteses T7 por modelo | Revisão independente pendente | Clonagem falhou; não é teste do critério D em si | Pendente |
 | GPT-6 (T8) | F | Não se aplica: ChatGPT não foi usado na T7 | Não confirmada por execução | Não determinável | Consultar sínteses T7 por modelo | Arquivos citados precisam ser conferidos | Pipeline não executado | Pendente |
 | GPT-6 (T8) | S | Não se aplica: ChatGPT não foi usado na T7 | Estrutura favorável, com ressalvas | Não determinável | Consultar sínteses T7 por modelo | Revisão independente pendente | Sem teste longitudinal | Pendente |
@@ -102,8 +102,18 @@ Não considerar uma resposta melhor apenas porque é mais longa, confiante ou us
 6. As diferenças podem ser explicadas por mudança de modelo, acesso, contexto ou ambiente?
 7. O resultado aponta robustez, sensibilidade ou falta de evidência para concluir?
 
-## 8. Conclusão parcial atualizada
+## 8. Conclusão parcial (histórica, 20/10/2026; ver §9)
 
 > Os resultados da Tarefa 8 indicam que as avaliações são **[robustas / parcialmente robustas / sensíveis às configurações / inconclusivas]** para os critérios **[preencher]**. A principal diferença observada foi **[preencher]**. Essa diferença foi sustentada por **[evidências verificadas / evidências insuficientes / diferença de ambiente]**. Portanto, **[responder à pergunta de pesquisa sem generalizar além das execuções realizadas]**.
 
 **Conclusão atualizada:** a comparação de robustez entre T7 e T8 é exploratória e ainda inconclusiva: a T7 documenta Claude, Grok e Gemini, enquanto a T8 registra GPT-6; portanto, não existe uma linha de base ChatGPT-T7 e não se deve descrever o estudo como comparação longitudinal do mesmo modelo. A resposta integral da rodada GPT-6 com esforço alto solicitado também não está preservada como transcrição literal. A auditoria, entretanto, acrescentou uma evidência técnica verificável: a representação TCL rotulada historicamente como stable corresponde ao hash da política rich do código atual, enquanto a política stable descrita gera outro hash. A tentativa de execução completa foi bloqueada por DNS; portanto, essa nova evidência diz respeito à serialização/hash, não à execução do pipeline inteiro. Não atribuir essa diferença exclusivamente ao esforço do modelo nem concluir que o artefato inteiro falha em reprodutibilidade.
+
+## 9. Fechamento (23/11/2026)
+
+Com as rodadas T8-C-01 e T8-C-02, passou a existir uma **comparação controlada do mesmo modelo**: Claude Opus 5.5, com o mesmo prompt e o mesmo ambiente, alterando apenas o esforço. Além disso, o Claude tem linha de base na T7.
+
+- **Esforço (C-01 × C-02):** 4/4 selos iguais. O esforço máximo ampliou a cobertura de evidências (12/12 hashes publicados examinados, 8 versões históricas, 2 defeitos novos), sem nenhuma evidência inexistente ou incorreta.
+- **T7 → T8 (Claude):** D, S e R estáveis. F passou de "execução parcial" para "atendido com ressalvas", uma mudança sustentada pela execução completa em laboratório e atribuível principalmente a acesso/ambiente.
+- **Selos oficiais:** concordância em D, F e S. Divergência em R, sustentada por evidência reexecutável.
+
+Tabela completa, análise de concordâncias e conclusão: [RELATORIO_FINAL_T8.md](RELATORIO_FINAL_T8.md).

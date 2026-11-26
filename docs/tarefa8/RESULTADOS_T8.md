@@ -1,5 +1,7 @@
 # Resultados da Tarefa 8
 
+> **Atualização de 23/11/2026, fechamento:** foram concluídas as rodadas T8-C-01 e T8-C-02 (Claude, esforço controlado) e T8-GPT6-03. Os resultados consolidados, a tabela comparativa T7 × T8 e a conclusão estão em [RELATORIO_FINAL_T8.md](RELATORIO_FINAL_T8.md). As seções abaixo preservam o registro histórico das etapas anteriores.
+
 ## 1. Estado da coleta
 
 **Status: duas rodadas GPT-6 registradas em formato estruturado; auditoria independente parcial concluída; demais variantes planejadas pendentes.** T8-GPT6-01 foi registrada em 2026-10-19 com esforço padrão; T8-GPT6-02 foi registrada na mesma data com esforço alto solicitado pela usuária. Em ambas, o nome exibido foi GPT-6 e a versão exata não foi informada. Na segunda rodada, o nível de esforço é metadado solicitado/registrado, não verificado independentemente. Os registros estruturados não são transcrições literais integrais, e as respostas originais completas não foram arquivadas separadamente. Consulte [T8_GPT6_PADRAO.md](T8_GPT6_PADRAO.md), o relatório analítico da segunda rodada e [AUDITORIA_EVIDENCIAS_T8_GPT6.md](AUDITORIA_EVIDENCIAS_T8_GPT6.md).
@@ -14,12 +16,13 @@ A linha de base resumida da Tarefa 7 está documentada em [../RESULTADOS_LLM.md]
 |---|---|---|---|---|---|---|---|---|---|
 | T8-GPT6-01 | GPT-6; versão exata não informada | Padrão | Analítica + tentativa de execução | Acesso público confirmado na auditoria | Não confirmada por execução completa | Estrutura documentada; sem teste longitudinal | Não confirmada; divergência histórica/código identificada | Sim | Não arquivada separadamente | Parcial: inspeção dos arquivos e recálculo de hash |
 | T8-GPT6-02 | GPT-6; versão exata não informada | Alto solicitado pela usuária; configuração não verificável independentemente | Analítica por consulta ao repositório público | Acesso público confirmado | Pipeline completo não executado | Estrutura documental favorável; sem teste longitudinal | Procedimento e hashes de referência encontrados; reprodução integral não demonstrada | Resumo analítico salvo; transcrição literal não recuperada | Não | Parcial: inspeção documental e nova verificação isolada stable/rich |
-| T8-C-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
-| T8-C-02 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
-| T8-G-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
-| T8-G-02 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
-| T8-GM-01 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
-| T8-GM-02 | A preencher | A preencher | Analítica | Pendente | Pendente | Pendente | Pendente | Não | Não |
+| T8-GPT6-03 | ChatGPT gratuito; modelo não registrado | Padrão | Analítica + tentativa de execução (clone falhou) | Atendido | Não validado independentemente | Favorável c/ ressalvas | Parcialmente demonstrada | Sim | Sim | Sim ([ficha](T8_GPT6_03_VERIFICACAO.md)) |
+| T8-C-01 | Claude Opus 5.5 | Padrão | Analítica + execução (clone, testbed sintético, recomputação) | Atendido c/ ressalvas | Atendido c/ ressalvas | Atendido c/ ressalvas | Parcialmente atendido | Sim | Sim | Sim ([ficha](T8_CLAUDE_VERIFICACAO.md)) |
+| T8-C-02 | Claude Opus 5.5 | **Máximo** | Analítica + execução (clone, laboratório emulado, recomputação, 8 versões históricas) | Sustentado | Sustentado c/ ressalvas | Sustentado c/ ressalvas | Parcialmente sustentado | Sim | Sim | Sim ([ficha](T8_CLAUDE_VERIFICACAO.md)) |
+| T8-G-01 | Grok | — | Não realizada (protocolo §11) | — | — | — | — | — | — |
+| T8-G-02 | Grok | — | Não realizada (protocolo §11) | — | — | — | — | — | — |
+| T8-GM-01 | Gemini | — | Não realizada (protocolo §11) | — | — | — | — | — | — |
+| T8-GM-02 | Gemini | — | Não realizada (protocolo §11) | — | — | — | — | — | — |
 
 Os identificadores T8-C, T8-G e T8-GM são rótulos internos para organizar a coleta; não representam nomes oficiais de modelos. O registro GPT-6 não permite inferir versão exata a partir do nome exibido.
 
@@ -77,7 +80,7 @@ O teste confirma a divergência entre o rótulo histórico e os campos da string
 - **Avaliação analítica:** duas respostas registradas em forma estruturada; transcrições integrais não preservadas separadamente.
 - **Execução independente do pipeline:** não concluída.
 - **Motivo relatado:** falha de resolução DNS na clonagem e ausência de ferramentas de rede no ambiente.
-- **Selos que permaneceram estáveis ou mudaram:** ainda não determinado.
+- **Selos que permaneceram estáveis ou mudaram (fechamento 23/11/2026):** Claude T8-C-01 × T8-C-02, 4/4 iguais (robusto ao esforço). Claude T7 → T8, D, S e R estáveis e F mudou para atendido com ressalvas por execução completa em laboratório. ChatGPT 01/02/03, veredicto qualitativo estável. Detalhes em [RELATORIO_FINAL_T8.md](RELATORIO_FINAL_T8.md).
 - **Evidências novas verificadas diretamente:** arquivos principais existem; README e canonicalização foram inspecionados; clone por Git falhou com código 128 por DNS; teste local da fixture confirmou hash stable `3ce29174...` e hash rich `e20c4825...`, este último correspondente ao registro histórico rotulado `stable`.
 - **Afirmações sem verificação independente:** ambiente e erro de clonagem da resposta original não têm log bruto anexado; o pipeline de rede completo não foi executado.
 - **Limitações:** a resposta é um resultado do modelo, não comprova reprodução do pipeline. A auditoria detalhada está em `AUDITORIA_EVIDENCIAS_T8_GPT6.md`; ChatGPT não foi utilizado na T7, conforme esclarecimento da responsável; portanto, não existe resposta ChatGPT-T7 a recuperar.

@@ -72,4 +72,4 @@ A utilização de um prompt padronizado não produziu avaliações completamente
 
 ## Tarefa 8 — análise de robustez
 
-A extensão da atividade está organizada separadamente em [`docs/tarefa8/`](docs/tarefa8/README.md), sem substituir os registros da Tarefa 7. Inclui protocolo experimental, registro de versões e esforço, prompts, tabelas de coleta, comparação T7 × T8 e fluxograma. Os resultados de T8 estão marcados como pendentes até que as novas variantes sejam efetivamente executadas e suas evidências verificadas.
+A extensão da atividade está organizada separadamente em [`docs/tarefa8/`](docs/tarefa8/README.md), sem substituir os registros da Tarefa 7. Inclui protocolo experimental, registro de versões e esforço, prompts, tabelas de coleta, comparação T7 × T8 e fluxograma. **A Tarefa 8 foi concluída em 23/11/2026.** Veja o [relatório final](docs/tarefa8/RELATORIO_FINAL_T8.md).

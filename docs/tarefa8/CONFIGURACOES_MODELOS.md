@@ -8,7 +8,7 @@ Este documento é o registro auditável das configurações efetivamente usadas.
 - **Forma de acesso na Tarefa 7:** sites/interfaces das ferramentas.
 - **Transcrições integrais da Tarefa 7:** não inventariadas neste repositório; os documentos consultados contêm sínteses de Claude, Grok e Gemini.
 - **Artefato avaliado:** IoT-ID — https://github.com/GT-IoTEdu/sbrc26_fingerprint.
-- **Situação da Tarefa 8:** duas rodadas GPT-6 registradas em forma estruturada (esforço padrão e esforço alto solicitado); revisão independente parcial; demais variantes planejadas pendentes. Transcrições literais integrais não preservadas separadamente.
+- **Situação da Tarefa 8 (23/11/2026, fechada):** Claude, 2 rodadas com esforço controlado (T8-C-01 padrão, T8-C-02 máximo) e transcrição literal; ChatGPT, 3 rodadas (T8-GPT6-01 e 02 em registro estruturado; T8-GPT6-03 com transcrição literal). Grok e Gemini não repetidos por decisão metodológica ([protocolo §11](PROTOCOLO_EXPERIMENTAL.md)).
 
 **Nota metodológica:** conforme esclarecimento da responsável, ChatGPT não foi utilizado na Tarefa 7. Os documentos disponíveis descrevem três avaliações (Claude, Grok e Gemini); esses são os modelos registrados na linha de base atual. Se surgir documentação original adicional sobre outro modelo, o inventário poderá ser atualizado, mas não se deve presumir uma avaliação ChatGPT-T7.
 
@@ -28,14 +28,15 @@ Os documentos atuais da Tarefa 7 resumem Claude, Grok e Gemini. Os nomes comerci
 |---|---|---|---|---|---|
 | T8-GPT6-01 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço padrão | Configuração registrada para primeira execução | Rodada registrada em resumo estruturado; tentativa de execução independente não concluída; revisão de evidências parcial |
 | T8-GPT6-02 | GPT-6 (nome exibido) | Prompt padronizado; versão exata não informada | Esforço alto solicitado pela usuária; não verificável independentemente | Esforço solicitado/registrado; versão exata não informada | Rodada analítica registrada em resumo estruturado; pipeline completo não executado; transcrição literal integral não preservada |
-| T8-C-01 | Claude | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
-| T8-C-02 | Claude | Mesmo identificador de T8-C-01 | Esforço alto/máximo disponível | Esforço | A executar |
-| T8-G-01 | Grok | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
-| T8-G-02 | Grok | Mesmo identificador de T8-G-01 | Esforço alto/máximo disponível | Esforço | A executar |
-| T8-GM-01 | Gemini | Mesmo identificador da T7, se disponível | Esforço padrão | Linha de base de esforço | A executar |
-| T8-GM-02 | Gemini | Mesmo identificador de T8-GM-01 | Esforço alto/máximo disponível | Esforço | A executar |
+| T8-GPT6-03 | ChatGPT, plano gratuito; modelo padrão do plano (nome não registrado) | Prompt padronizado | Esforço padrão | Repetição intra-provedor | Rodada com transcrição literal integral; clone falhou (DNS); [ficha](T8_GPT6_03_VERIFICACAO.md) |
+| T8-C-01 | Claude Opus 5.5 (`claude-opus-5-5`) | Prompt padronizado literal; agente novo com shell | Esforço padrão | Linha de base de esforço | **Concluída** em 23/11/2026; transcrição literal; [ficha](T8_CLAUDE_VERIFICACAO.md) |
+| T8-C-02 | Claude Opus 5.5 (`claude-opus-5-5`) | Idêntica a T8-C-01 | Esforço **máximo** (`effort = max`) | **Somente o esforço** | **Concluída** em 23/11/2026; transcrição literal; [ficha](T8_CLAUDE_VERIFICACAO.md) |
+| T8-G-01 | Grok | — | Esforço padrão | — | Não realizada (decisão metodológica, protocolo §11) |
+| T8-G-02 | Grok | — | Esforço máximo | — | Não realizada (decisão metodológica, protocolo §11) |
+| T8-GM-01 | Gemini | — | Esforço padrão | — | Não realizada (decisão metodológica, protocolo §11) |
+| T8-GM-02 | Gemini | — | Esforço máximo | — | Não realizada (decisão metodológica, protocolo §11) |
 
-**Importante:** T8-GPT6-01 e T8-GPT6-02 são rodadas registradas; T8-C-01/02, T8-G-01/02 e T8-GM-01/02 são variantes planejadas, não execuções concluídas. ChatGPT aparece na T8 como modelo usado nas duas rodadas registradas, mas não faz parte da linha de base T7 conforme esclarecimento da responsável. Se um provedor não oferecer um controle de esforço ou não permitir confirmar o modelo, marcar como indisponível e documentar a alternativa utilizada. Não comparar “esforço máximo” entre provedores como se fossem parâmetros equivalentes.
+**Importante:** as rodadas T8-C-01/02 e T8-GPT6-01/02/03 foram executadas; T8-G-01/02 e T8-GM-01/02 não foram realizadas, por decisão metodológica. ChatGPT aparece na T8 como modelo usado nas duas rodadas registradas, mas não faz parte da linha de base T7 conforme esclarecimento da responsável. Se um provedor não oferecer um controle de esforço ou não permitir confirmar o modelo, marcar como indisponível e documentar a alternativa utilizada. Não comparar “esforço máximo” entre provedores como se fossem parâmetros equivalentes.
 
 ## 4. Ficha a preencher por execução
 
@@ -83,3 +84,27 @@ Copiar esta ficha para cada execução realizada:
 5. Se houver execução por API, registrar os parâmetros reais enviados, removendo chaves e credenciais.
 6. Não alterar retroativamente as respostas originais da Tarefa 7; correções ou esclarecimentos devem ser registrados separadamente.
 7. Diferenciar sempre resposta produzida pelo modelo, evidência documental citada e execução independente realmente observada.
+
+## 7. Fichas preenchidas — T8-C-01 e T8-C-02
+
+| Campo | T8-C-01 | T8-C-02 |
+|---|---|---|
+| Data | 2026-11-23 | 2026-11-23 |
+| Provedor/interface | Anthropic; agente novo, sem histórico, em ambiente Linux em nuvem | idem |
+| Nome/ID do modelo | Claude Opus 5.5 / `claude-opus-5-5` | idem |
+| Esforço | padrão (parâmetro não definido) | máximo (`effort = max`) |
+| Prompt | `docs/PROMPT_PADRONIZADO.md`, literal, mais instrução operacional (diretório próprio; não ler outros arquivos) | idem |
+| Acesso ao repositório | clone OK (commit `167f487`) | idem |
+| Resposta integral | [respostas/T8-C-01.md](respostas/T8-C-01.md) | [respostas/T8-C-02.md](respostas/T8-C-02.md) |
+| Custo observado | ≈18 min; 41 chamadas de ferramenta; ≈201 mil tokens | ≈66 min; 142 chamadas; ≈457 mil tokens |
+| Limitações | sem dispositivos físicos (testbed sintético); Docker Hub bloqueado | idem; daemon Docker instável |
+
+## 8. Ficha preenchida — T8-GPT6-03
+
+- **Data:** 2026-11-23
+- **Provedor/interface:** ChatGPT, web, **plano gratuito**
+- **Modelo:** padrão do plano gratuito (nome exato não registrado)
+- **Esforço:** padrão (nenhum nível selecionado)
+- **Prompt:** `docs/PROMPT_PADRONIZADO.md`
+- **Acesso:** consulta web; clone falhou (DNS, código 128)
+- **Resposta integral:** [respostas/T8-GPT6-03.md](respostas/T8-GPT6-03.md)

@@ -121,3 +121,44 @@ Os provedores podem não revelar a versão exata ou o esforço usado; interfaces
 ## 10. Critério para responder à pergunta de pesquisa
 
 A robustez será discutida com base na estabilidade das decisões, na qualidade e verificabilidade das evidências e na concordância com a execução independente. A conclusão poderá ser de robustez parcial, sensibilidade a configurações ou evidência insuficiente. Não presumir antecipadamente qual resultado será obtido.
+
+## 11. Decisão de escopo final (23/11/2026)
+
+Por decisão da responsável, a T8 foi concluída com **duas famílias de modelos**:
+
+| Família | Papel no estudo | Rodadas |
+|---|---|---|
+| **Claude (Anthropic)** | Único modelo com linha de base na T7. Permite a comparação **T7 × T8** e o **experimento controlado de esforço** (mesma versão, mesmo prompt, mesma entrada, só o esforço variando) | T8-C-01 (padrão), T8-C-02 (máximo) |
+| **ChatGPT (OpenAI)** | Sem linha de base na T7. Usado como **comparação de esforço dentro da T8** e de **estabilidade intra-provedor** (três rodadas) | T8-GPT6-01 (padrão), T8-GPT6-02 (alto), T8-GPT6-03 (padrão, plano gratuito) |
+
+**Grok e Gemini não foram repetidos na T8.** As rodadas planejadas T8-G-01/02 e T8-GM-01/02 ficam registradas como *não realizadas por decisão metodológica*, não como pendência nem como resultado. Justificativas:
+
+1. o enunciado da T8 pede o uso *preferencial*, não obrigatório, das mesmas LLMs;
+2. o Gemini não acessou o repositório na T7, então qualquer mudança nele seria confundida com mudança de acesso;
+3. o experimento de esforço exige controle explícito e registrável do nível de raciocínio, e as rodadas do Claude foram feitas com esse controle (§12).
+
+Consequência: a comparação T7 × T8 é feita **apenas para o Claude**. As conclusões sobre Grok e Gemini da T7 não são reavaliadas.
+
+## 12. Condições de execução das rodadas do Claude
+
+As rodadas T8-C-01 e T8-C-02 foram executadas em 23/11/2026 pelo modelo **Claude Opus 5.5** (`claude-opus-5-5`), cada uma em um **agente novo, sem histórico**, num ambiente Linux em nuvem com shell e acesso ao GitHub.
+
+| Item | T8-C-01 | T8-C-02 |
+|---|---|---|
+| Modelo | Claude Opus 5.5 (`claude-opus-5-5`) | Claude Opus 5.5 (`claude-opus-5-5`) |
+| Esforço de raciocínio | padrão (parâmetro não definido) | **máximo** (`effort = max`) |
+| Prompt | `docs/PROMPT_PADRONIZADO.md`, literal | idem |
+| Instrução operacional adicional | diretório de trabalho próprio; não ler outros arquivos da máquina; salvar e devolver o relatório completo | idem |
+| Ferramentas | shell Linux, git, Python, internet | idem |
+
+Controles de independência:
+
+- os agentes não receberam a conversa nem as respostas da T7 ou de outras LLMs;
+- durante as rodadas, os arquivos da T7, as verificações anteriores e a resposta do ChatGPT foram retirados do ambiente;
+- as duas rodadas rodaram em paralelo, cada uma no seu diretório.
+
+Limitações:
+
+- a versão do Claude usada na T7 não foi registrada, então T7 → T8-C-01 pode misturar **mudança de versão** com **mudança de interface/acesso** (chat web na T7, agente com shell na T8);
+- o contraste **T8-C-01 × T8-C-02 isola apenas o esforço**, porque modelo, prompt, ambiente e data são os mesmos;
+- cada configuração foi executada **uma única vez**, então não foi medida a variação entre repetições da mesma configuração.

@@ -1,19 +1,41 @@
 # Fluxograma — Tarefa 8
 
+> Atualizado em 23/11/2026 com as configurações efetivamente executadas (T8-C-01/02, T8-GPT6-01/02/03), a verificação direta no artefato e as comparações por esforço, T7 × T8 e com os selos oficiais.
+
 ```mermaid
 flowchart TD
-    A["Recuperar artefato e resultados T7"] --> B["Confirmar prompt, modelos e critérios oficiais"]
-    B --> C["Registrar identificadores e configurações"]
-    C --> D["Selecionar variante controlada"]
-    D --> E["Avaliação analítica: D, F, S e R"]
-    D --> F["Execução independente, quando viável"]
-    E --> G["Guardar resposta integral e verificar evidências"]
-    F --> H["Guardar comandos, ambiente e resultados observados"]
-    G --> I["Comparar T7 × T8"]
-    H --> I
-    I --> J["Comparar com os selos oficiais"]
-    J --> K["Classificar estabilidade, mudança ou inconclusão"]
-    K --> L["Discutir robustez e limitações"]
+    A["Artefato IoT-ID<br/>commit 167f487"] --> B["Selos oficiais SBRC 2026<br/>D, F, S, R"]
+    A --> P["Prompt padronizado P1<br/>(igual à T7)"]
+
+    subgraph T7["Tarefa 7 — linha de base"]
+        P --> T7C["Claude"]
+        P --> T7G["Grok"]
+        P --> T7M["Gemini"]
+    end
+
+    subgraph T8["Tarefa 8 — variações controladas"]
+        P --> C1["T8-C-01<br/>Claude Opus 5.5, esforço padrão"]
+        P --> C2["T8-C-02<br/>Claude Opus 5.5, esforço máximo"]
+        P --> G1["T8-GPT6-01 / 03<br/>ChatGPT, esforço padrão"]
+        P --> G2["T8-GPT6-02<br/>ChatGPT, esforço alto"]
+        X["Grok e Gemini<br/>não repetidos (decisão §11)"]
+    end
+
+    C1 & C2 & G1 & G2 --> AN["Avaliação analítica<br/>D/F/S/R + evidências D/C/A/E"]
+    AN --> EX["Avaliação por execução<br/>clone, testbed, recomputação"]
+    EX --> RAW["Salvar resposta literal<br/>e configuração"]
+
+    A --> VER["Verificação direta no artefato<br/>clone + script (22 execuções)"]
+    RAW --> CHK{"Cada evidência existe<br/>e está correta?"}
+    VER --> CHK
+    CHK --> CLS["Confirmada / Inexistente /<br/>Incorreta / Não verificável"]
+
+    CLS --> CMP1["Esforço: C-01 × C-02<br/>GPT6 padrão × alto"]
+    T7C --> CMP2
+    CMP1 --> CMP2["T7 × T8 (Claude)"]
+    CMP2 --> CMP3["Comparar com selos oficiais"]
+    B --> CMP3
+    CMP3 --> CONC["Conclusão:<br/>robustez e sensibilidade"]
 ```
 
 ## Explicação

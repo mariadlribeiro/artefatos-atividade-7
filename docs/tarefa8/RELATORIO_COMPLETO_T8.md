@@ -1,5 +1,7 @@
 # Tarefa 8 — Robustez de avaliações de artefatos por LLMs
 
+> Este é o relatório da rodada T8-GPT6-02 (19/10/2026), mantido como registro histórico. O relatório consolidado da T8, com as rodadas do Claude, a comparação T7 × T8 e a conclusão final, está em [RELATORIO_FINAL_T8.md](RELATORIO_FINAL_T8.md).
+
 **Artefato avaliado:** IoT-ID: *Deterministic Device Identity from Hybrid Network Fingerprinting*  
 **Repositório-alvo:** https://github.com/GT-IoTEdu/sbrc26_fingerprint  
 **Repositório desta atividade:** https://github.com/mariadlribeiro/artefatos-atividade-7/tree/tarefa-8  

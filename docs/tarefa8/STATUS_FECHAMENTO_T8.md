@@ -1,6 +1,8 @@
 # Fechamento da Tarefa 8 — checklist de conclusão
 
-**Estado em 19/10/2026:** documentação consolidada parcialmente; execução integral do artefato e experimento controlado entre configurações ainda não concluídos.
+**Estado em 23/11/2026: TAREFA CONCLUÍDA.** Experimento controlado de esforço realizado (Claude, T8-C-01 × T8-C-02), pipeline executado em laboratório emulado, evidências conferidas e relatório final em [RELATORIO_FINAL_T8.md](RELATORIO_FINAL_T8.md). O histórico abaixo foi preservado; ver §8.
+
+*Estado anterior (19/10/2026):* documentação consolidada parcialmente; execução integral do artefato e experimento controlado entre configurações ainda não concluídos.
 
 Este documento distingue tarefas concluídas de tarefas que dependem de acesso, ambiente ou novos registros. Não converte pendências em resultados.
 
@@ -41,12 +43,12 @@ Este documento distingue tarefas concluídas de tarefas que dependem de acesso, 
 - [x] Executar a lógica de `verificar_hash_canonico_tcl.py` em Python 3.13.5 e guardar a saída bruta em `docs/tarefa8/SAIDA_TESTE_HASH_TCL.md`; ambos os hashes esperados coincidiram (código de saída 0). **Limite:** execução sobre a fixture do script, não sobre o módulo original do IoT-ID.
 - [x] Obter clone do artefato em ambiente com DNS/rede funcional; registrar commit SHA exato. **Feito em 23/11/2026:** commit `167f48792858630020a408147ade001e5c977f78` (ver [verificação completa](VERIFICACAO_COMPLETA_ARTEFATO.md)).
 - [x] Verificar comandos de ajuda/CLI e testes de canonicalização/hash que possam ser executados sem dispositivo IoT. **Feito em 23/11/2026:** `iot_id_fingerprint.py --help` (código 0); `fingerprint_hash.py` e o módulo original de canonicalização executados sobre as 22 execuções de `testes/`. Resultado: 9/22 reproduzem com `stable`, 6 (TCL) só com `rich`, 7 (Xiaomi e duas do IP `.100`) com nenhuma política.
-- [ ] Executar o pipeline ponta a ponta somente em LAN autorizada, com permissões e dispositivo de teste disponíveis; preservar logs, PCAPs permitidos, versões e comandos.
+- [x] Executar o pipeline ponta a ponta somente em LAN autorizada, com permissões e dispositivo de teste disponíveis; preservar logs, PCAPs permitidos, versões e comandos. **Feito em 23/11/2026** nas rodadas T8-C-01 e T8-C-02, em LANs isoladas com dispositivos emulados (*network namespaces* + UPnP sintético). Os dispositivos físicos do artigo não estavam disponíveis; isso está registrado como limitação.
 - [ ] Identificar o commit do código que produziu a execução TCL de 24/03/2026 e comparar essa versão histórica com a atual. *(Parcial: o [adendo](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md) explica o TCL; a [verificação completa](VERIFICACAO_COMPLETA_ARTEFATO.md) mostra o mesmo padrão temporal, com todas as execuções de 24/03 que têm mais campos que o TTL divergindo e todas as de 25/03 reproduzindo, mas o caso Xiaomi segue sem causa determinada.)*
-- [ ] Para novas avaliações LLM, salvar prompt e resposta literal integral imediatamente, com data, modelo exibido e configuração selecionada.
-- [ ] Se a pergunta de pesquisa continuar sendo sobre efeito do esforço de raciocínio, fazer comparação controlada com a mesma família/versão e o mesmo prompt, alterando apenas o esforço quando essa opção estiver disponível e identificável.
-- [ ] Se não for possível controlar a versão ou o esforço, declarar a comparação como exploratória e não atribuir causalidade à configuração.
-- [ ] Atualizar os resultados somente depois que os novos testes forem realmente executados.
+- [x] Para novas avaliações LLM, salvar prompt e resposta literal integral imediatamente, com data, modelo exibido e configuração selecionada. (T8-C-01, T8-C-02 e T8-GPT6-03 em [respostas/](respostas/).)
+- [x] Se a pergunta de pesquisa continuar sendo sobre efeito do esforço de raciocínio, fazer comparação controlada com a mesma família/versão e o mesmo prompt, alterando apenas o esforço quando essa opção estiver disponível e identificável. (Claude Opus 5.5, `effort` padrão × `max`.)
+- [x] Se não for possível controlar a versão ou o esforço, declarar a comparação como exploratória e não atribuir causalidade à configuração. (Feito para ChatGPT e para Claude T7 → T8.)
+- [x] Atualizar os resultados somente depois que os novos testes forem realmente executados.
 
 ## 5. Estado por critério D/F/S/R
 
@@ -74,3 +76,20 @@ Nenhum resultado ausente deve ser inventado, inferido a partir de outro LLM ou d
 **Limite mantido:** como o log não registra o SHA do commit executado, a versão exata que gerou a captura de 24/03 não está comprovada. O pipeline completo continua não executado; a tarefa permanece experimentalmente incompleta se a disciplina exigir execução ponta a ponta.
 
 Detalhes: [Adendo histórico da canonicalização TCL](ADENDO_HISTORICO_CANONICALIZACAO_TCL.md).
+
+
+## 8. Fechamento (23/11/2026)
+
+| Item do enunciado da T8 | Onde está |
+|---|---|
+| 1–3. Mesmo artefato, mesmas instruções, LLMs preferencialmente iguais | [Protocolo §11](PROTOCOLO_EXPERIMENTAL.md): Claude (com linha de base T7) e ChatGPT; Grok e Gemini não repetidos, com justificativa |
+| 4, 7. Variações definidas; versões, configurações e esforço registrados | [Protocolo §12](PROTOCOLO_EXPERIMENTAL.md), [Configurações](CONFIGURACOES_MODELOS.md) |
+| 5. Avaliações analítica e por execução repetidas | [respostas/](respostas/) |
+| 6, 8. Prompts iguais; prompts e resultados registrados | `docs/PROMPT_PADRONIZADO.md` (literal); [Resultados](RESULTADOS_T8.md) |
+| 9, 10. Evidências registradas e verificadas no artefato | [Claude](T8_CLAUDE_VERIFICACAO.md), [GPT6-03](T8_GPT6_03_VERIFICACAO.md), [verificação completa](VERIFICACAO_COMPLETA_ARTEFATO.md) |
+| 11–14. Comparação T7 × T8, mudanças, concordâncias, efeito do esforço | [Relatório final §3–5](RELATORIO_FINAL_T8.md), [Comparação §9](COMPARACAO_T7_T8.md) |
+| 15. Tabela comparativa | [Relatório final §3](RELATORIO_FINAL_T8.md) |
+| 16. Fluxograma atualizado | [Fluxograma](FLUXOGRAMA_T8.md), [Relatório final §6](RELATORIO_FINAL_T8.md) |
+| 17. Conclusão | [Relatório final §7](RELATORIO_FINAL_T8.md) |
+
+**Limitações mantidas:** dispositivos físicos indisponíveis (laboratórios emulados); versão do Claude na T7 não registrada; uma execução por configuração; ChatGPT sem linha de base na T7.

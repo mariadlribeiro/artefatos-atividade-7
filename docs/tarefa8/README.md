@@ -10,6 +10,10 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 
 ## Documentos desta etapa
 
+**➡ Comece pelo [Relatório final da T8](RELATORIO_FINAL_T8.md)**: tabela comparativa T7 × T8, análise, fluxograma e conclusão.
+
+- [Fichas e verificação — Claude T8-C-01/02](T8_CLAUDE_VERIFICACAO.md): experimento controlado de esforço (Claude Opus 5.5, padrão × máximo), com respostas literais em [respostas/](respostas/).
+
 - [Protocolo experimental](PROTOCOLO_EXPERIMENTAL.md): desenho do estudo, variáveis controladas e procedimento.
 - [Configurações dos modelos](CONFIGURACOES_MODELOS.md): registro das versões, provedores e esforço.
 - [Prompts](PROMPTS.md): prompt-base e instruções para as variantes.
@@ -27,6 +31,8 @@ Esta pasta complementa a Tarefa 7 sem alterar os resultados originais. O objetiv
 - [Status de fechamento](STATUS_FECHAMENTO_T8.md): checklist do que foi verificado, limitações e condições restantes para concluir experimentalmente a T8.
 
 ## Situação dos resultados
+
+**Fechamento em 23/11/2026:** concluídas as rodadas T8-C-01 e T8-C-02 (Claude, esforço controlado, com execução do pipeline em laboratório emulado) e T8-GPT6-03. Grok e Gemini não foram repetidos (decisão metodológica, protocolo §11). O parágrafo abaixo descreve o estado em 20/10/2026 e foi mantido como histórico.
 
 **Duas rodadas da T8 estão registradas em formato estruturado:** T8-GPT6-01 (GPT-6 exibido, esforço padrão) e T8-GPT6-02 (GPT-6 exibido, esforço alto solicitado), ambas datadas de 2026-10-19. A versão exata não foi informada; na segunda rodada, o nível de esforço não pode ser verificado independentemente. Os registros não são transcrições literais integrais. A análise documental e a tentativa de execução não resultaram em execução integral do pipeline IoT-ID.
 
